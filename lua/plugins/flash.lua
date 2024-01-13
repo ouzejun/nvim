@@ -12,5 +12,5 @@ return {
                 desc = "Flash" 
             },
         },
-}
+    }
 }
