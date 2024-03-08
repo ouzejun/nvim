@@ -1,5 +1,5 @@
 vim.api.nvim_set_hl(0, "CmpItemMenu",
-	            { fg = "#000080", bg = '#000080' })
+  { fg = "#000080", bg = '#000080' })
 
 local M = {
 	"hrsh7th/nvim-cmp",
@@ -9,6 +9,7 @@ local M = {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-cmdline",
+    "saadparwaiz1/cmp_luasnip",
 		"L3MON4D3/LuaSnip",
 	},
 }
