@@ -19,6 +19,9 @@ opt.wrap = true
 -- 光标行
 opt.cursorline = false
 
+-- endofbuffer
+vim.opt.fillchars = { eob = " " }
+
 -- 启用鼠标
 opt.mouse:append("a")
 
@@ -33,4 +36,33 @@ opt.splitbelow = true
 opt.ignorecase = true
 opt.smartcase = true
 
+-- 设置 signcolumn 始终显示，可以根据需要更改这个设置
+vim.opt.signcolumn = "yes"
+-- 定义一个函数来设置 SignColumn 的背景颜色
+local function set_signcolumn_bg_color()
+  -- 使用 nvim_set_hl API 函数设置 SignColumn 的背景颜色
+  -- 这里以深蓝色为例，你可以根据需要更改颜色代码
+  vim.api.nvim_set_hl(0, "SignColumn", {bg = "#000080"})
+end
+-- 调用函数设置背景颜色
+set_signcolumn_bg_color()
+
+
+-- 设置 tab 为两个空格
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "python",
+    command = [[setlocal shiftwidth=4 tabstop=4 expandtab]]
+})
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "java",
+    command = [[setlocal shiftwidth=4 tabstop=4 expandtab]]
+})
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "lua",
+    command = [[setlocal shiftwidth=2 tabstop=2 expandtab]]
+})
 

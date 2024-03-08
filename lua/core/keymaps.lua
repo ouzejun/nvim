@@ -8,13 +8,11 @@ keymap.set("i", "<c-d>", "<Left><Del>")
 -- 上下左右移动
 keymap.set("i", "<c-j>", "<Left>")
 keymap.set("i", "<c-l>", "<Right>")
-keymap.set("i", "<c-i>", "<Up>")
+keymap.set("i", "<c-u>", "<Up>")
 keymap.set("i", "<c-k>", "<Down>")
 -- 单词移动
 keymap.set("i", "<c-n>", "<Esc>bi")
 keymap.set("i", "<a-n>", "<Esc>ea")
--- Tab
-keymap.set("i", "<Tab>", "    ")
 
 -- ----------视觉模式----------
 -- 上下左右移动
@@ -64,4 +62,18 @@ keymap.set("n", "<s-u>", "<c-r>")
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
+-- 删除一些不必要容易引起麻烦的键
+keymap.set("n", "q", "<Nop>")
+keymap.set("n", "s", "<Nop>")
+keymap.set("n", "S", "<Nop>")
+keymap.set("n", "r", "<Nop>")
 
+-- lsp
+keymap.set("n", "ga", "<cmd>Lspsaga code_action<CR>")
+keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
+keymap.set("n", "gD", "<cmd>Lspsaga goto_definition<CR>")
+keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>")
+keymap.set("n", "gh", "<cmd>Lspsaga hover_doc<CR>")
+keymap.set("n", "gH", "<cmd>Lspsaga hover_doc ++keep<CR>")
+keymap.set("n", "gn", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+keymap.set("n", "gt", "<cmd>Lspsaga term_toggle<CR>")

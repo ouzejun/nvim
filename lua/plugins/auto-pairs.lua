@@ -1,0 +1,3 @@
+return {
+    'LunarWatcher/auto-pairs',
+}
