@@ -19,9 +19,6 @@ opt.wrap = true
 -- 光标行
 opt.cursorline = false
 
--- endofbuffer
-vim.opt.fillchars = { eob = " " }
-
 -- 启用鼠标
 opt.mouse:append("a")
 

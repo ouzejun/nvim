@@ -4,6 +4,7 @@ vim.api.nvim_set_hl(0, "CmpItemMenu",
 local M = {
 	"hrsh7th/nvim-cmp",
 	dependencies = {
+    'neovim/nvim-lspconfig',
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-nvim-lua",
 		"hrsh7th/cmp-buffer",
@@ -16,6 +17,7 @@ local M = {
 
 M.config = function()
 	local cmp = require("cmp")
+  local luasnip = require("luasnip")
 	vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 	local kind_icons = {
@@ -42,6 +44,10 @@ M.config = function()
 		Color = " ",
 	}
 	cmp.setup({
+    completion = {
+      Keyword_length = 0,
+      completeopt = 'menu,menuone,noselect',
+    },
 		snippet = {
 			expand = function(args)
 				require("luasnip").lsp_expand(args.body)
@@ -60,12 +66,14 @@ M.config = function()
 			["<C-p>"] = cmp.mapping.abort(),
 			["<CR>"] = cmp.mapping.confirm({ select = false }),
 			['<Tab>'] = cmp.mapping(function(fallback)
-                            if cmp.visible() then
-                                cmp.select_next_item()
-                            else
-				fallback()
-                            end
-                        end, { 'i', 's' }),
+        if cmp.visible() then
+          cmp.select_next_item()
+        elseif luasnip.expand_or_jumpable() then
+          luasnip.expand_or_jump()
+        else
+          fallback()
+        end
+      end, { 'i', 's' }),
 		}),
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
@@ -85,11 +93,11 @@ M.config = function()
 				  kind_icons[vim_item.kind], vim_item.kind)
 				-- Source
 				vim_item.menu = ({
-					buffer = "[Buffer]",
+					buffer   = "[Buffer]",
 					nvim_lsp = "[LSP]",
-					luasnip = "[LuaSnip]",
+					luasnip  = "[LuaSnip]",
 					nvim_lua = "[NvimAPI]",
-					path = "[Path]",
+					path     = "[Path]",
 				})[entry.source.name]
 				return vim_item
 			end,

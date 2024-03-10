@@ -10,7 +10,7 @@ function GitRootToParentDirectory()
 
     local file_path = vim.fn.expand('%:p')
     local relative_path = vim.fn.fnamemodify(file_path, ':.:h')
-   
+
     return relative_path
 end
 
@@ -24,7 +24,7 @@ local colors = {
   yellow       = '#E5C890',
   pink         = '#F5BDE6',
 
-  darkgray     = '#626880', 
+  darkgray     = '#626880',
   gray         = '#A5ADCE',
   lightgray    = '#B5BFE2',
 }

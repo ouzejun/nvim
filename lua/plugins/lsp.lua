@@ -2,6 +2,7 @@
 
 return {
   "neovim/nvim-lspconfig",
+  opts = { inlay_hints = { enabled = true } },
 
   dependencies = {
     "williamboman/mason.nvim",
@@ -21,11 +22,28 @@ return {
           package_uninstalled = "✗"},
       },
     })
-
-    lspconfig.rust_analyzer.setup({
-      
+    mason_lspconfig.setup({
+      automatic_reload = true,
+      automatic_server_installation = true,
+      automatic_server_upgrade = true,
+      automatic_server_update = true,
     })
+    mason_lspconfig.setup_handlers({
+      function(server_name) -- Default handler for all servers
+        lspconfig[server_name].setup{}
+      end,
+      -- Specific server setup can be done like this:
+      -- ["rust_analyzer"] = function()
+      --     lspconfig.rust_analyzer.setup{}
+      -- end,
 
-    -- ...
+      -- Setup for `jdtls`
+      ["jdtls"] = function()
+        -- Add your `jdtls` specific configuration here
+        lspconfig.jdtls.setup{
+          -- Your `jdtls` config here
+        }
+      end,
+    })
   end,
 }

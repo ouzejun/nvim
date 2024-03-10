@@ -1,9 +1,11 @@
+vim.g.mapleader = ' '
+
 -- plugins
 require('lazy-init')
 
 -- lsp
 require('lsp.init')
-require('lsp.languages.comman')
+require('lsp.languages.snip')
 require('lsp.languages.jdtls')
 require('lsp.languages.pylsp')
 require('lsp.languages.lua_ls')
