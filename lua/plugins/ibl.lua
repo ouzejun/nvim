@@ -13,6 +13,17 @@ return {
     'lukas-reineke/indent-blankline.nvim',
     config = function()
       require("ibl").setup({
+        exclude = {
+          filetypes = {
+            "lspinfo",
+            'lazy',
+            "dashboard",
+            "checkhealth",
+            "startify",
+            "help",
+            "",
+          },
+        },
         indent = {
           smart_indent_cap = true,
           highlight = {
