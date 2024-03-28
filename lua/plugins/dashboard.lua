@@ -1,25 +1,16 @@
-vim.api.nvim_set_hl(0, "DashboardHeader",
-  { ctermbg = none, ctermfg = 4 })
-vim.api.nvim_set_hl(0, "DashboardFooter",
-  { ctermbg = none, ctermfg = 1 })
-vim.api.nvim_set_hl(0, "DashboardShortcut1",
-  { ctermbg = none, ctermfg = 1 })
-vim.api.nvim_set_hl(0, "DashboardShortcut2",
-  { ctermbg = none, ctermfg = 2 })
-vim.api.nvim_set_hl(0, "DashboardShortcut5",
-  { ctermbg = none, ctermfg = 5})
-vim.api.nvim_set_hl(0, "DashboardShortcut3",
-  { ctermbg = none, ctermfg = 3 })
-vim.api.nvim_set_hl(0, "DashboardShortcut4",
-  { ctermbg = none, ctermfg = 4 })
-vim.api.nvim_set_hl(0, "DashboardShortcut6",
-  { ctermbg = none, ctermfg = 6})
-vim.api.nvim_set_hl(0, "DashboardProjectTitle",
-  { ctermbg = none, ctermfg = 1 })
-vim.api.nvim_set_hl(0, "DashboardMruTitle",
-  { ctermbg = none, ctermfg = 3 })
-vim.api.nvim_set_hl(0, "DashboardFiles",
-  { ctermbg = none, ctermfg = 5 })
+vim.cmd [[
+  highlight DashboardHeader guifg=#8CAAEE
+  highlight DashboardFooter guifg=#F38BA8
+  highlight DashboardShortcut1 guifg=#F38BA8
+  highlight DashboardShortcut2 guifg=#A6E3A1
+  highlight DashboardShortcut3 guifg=#F9E2AF
+  highlight DashboardShortcut4 guifg=#89B4FA
+  highlight DashboardShortcut5 guifg=#F5C2E7
+  highlight DashboardShortcut6 guifg=#94E2D5
+  highlight DashboardProjectTitle guifg=#F38BA8
+  highlight DashboardMruTitle guifg=#F9E2AF
+  highlight DashboardFiles guifg=#F5C2E7
+]]
 
 return {
   'nvimdev/dashboard-nvim',

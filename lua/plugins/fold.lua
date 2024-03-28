@@ -1,23 +1,23 @@
 vim.api.nvim_set_hl(0, "UfoFoldedFg",
-  { bg = none, fg = none })
+  { bg = NONE, fg = NONE })
 vim.api.nvim_set_hl(0, "UfoFoldedBg",
-  { bg = none, fg = none })
+  { bg = NONE, fg = NONE })
 vim.api.nvim_set_hl(0, "UfoCursorFoldedLine",
-  { bg = none, fg = none })
+  { bg = NONE, fg = NONE })
 vim.api.nvim_set_hl(0, "UfoFoldedEllipsis",
-  { bg = none, fg = none })
+  { bg = NONE, fg = NONE })
 vim.api.nvim_set_hl(0, "FoldColumn",
-  { bg = none, ctermfg = 4 })
+  { bg = NONE, ctermfg = 4 })
 vim.api.nvim_set_hl(0, "UfoPreviewSbar",
-  { bg = none, fg = none })
+  { bg = NONE, fg = NONE })
 vim.api.nvim_set_hl(0, "UfoPreviewThumb",
-  { bg = none, fg = none })
+  { bg = NONE, fg = NONE })
 vim.api.nvim_set_hl(0, "UfoPreviewWinBar",
-  { bg = none, fg = none })
+  { bg = NONE, fg = NONE })
 vim.api.nvim_set_hl(0, "UfoPreviewCursorLine",
-  { bg = none, fg = none })
+  { bg = NONE, fg = NONE })
 vim.api.nvim_set_hl(0, "Folded",
-  { bg = none, fg = none })
+  { bg = NONE, fg = NONE })
 
 return {
   "kevinhwang91/nvim-ufo",

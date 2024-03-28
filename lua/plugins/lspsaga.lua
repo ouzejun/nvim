@@ -1,15 +1,8 @@
-vim.api.nvim_set_hl(0, "SagaBorder",
-  { bg = none, fg = none })
-vim.api.nvim_set_hl(0, "SagaNormal",
-  { bg = '#000080', fg = none })
-vim.api.nvim_set_hl(0, "ActionPreviewNormal",
-  { ctermbg = none, ctermfg = 15 })
-vim.api.nvim_set_hl(0, "ActionPreviewBorder",
-  { ctermbg = none })
-vim.api.nvim_set_hl(0, "CodeActionText",
-  { ctermbg = none, ctermfg = 8 })
-vim.api.nvim_set_hl(0, "CodeActionNumber",
-  { ctermbg = none, ctermfg = 4 })
+vim.cmd [[
+  highlight DiagnosticWarn guifg=#E5C890
+  highlight DiagnosticError guifg=#db5a5c
+  highlight SagaWinBarSep guifg=#B5BFE2
+]]
 
 return {
   "nvimdev/lspsaga.nvim",

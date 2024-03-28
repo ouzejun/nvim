@@ -1,4 +1,5 @@
 local opt = vim.opt
+vim.opt.termguicolors = true
 
 syntax = "on"
 
@@ -7,11 +8,8 @@ opt.relativenumber = true
 opt.number = true
 
 -- 括号高亮
-vim.cmd [[highlight MatchParen ctermbg=None ctermfg=1]]
 
 -- 上限80字符
-opt.colorcolumn = "81"
-vim.cmd [[highlight ColorColumn ctermbg=8]]
 
 -- 防止包裹
 opt.wrap = true
@@ -39,11 +37,10 @@ vim.opt.signcolumn = "yes"
 local function set_signcolumn_bg_color()
   -- 使用 nvim_set_hl API 函数设置 SignColumn 的背景颜色
   -- 这里以深蓝色为例，你可以根据需要更改颜色代码
-  vim.api.nvim_set_hl(0, "SignColumn", {bg = "#000080"})
+  vim.api.nvim_set_hl(0, "SignColumn", {bg = NONE})
 end
 -- 调用函数设置背景颜色
 set_signcolumn_bg_color()
-
 
 -- 设置 tab 为两个空格
 vim.o.tabstop = 4

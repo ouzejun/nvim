@@ -16,4 +16,5 @@ require('dap.languages.jdtls')
 -- core
 require('core.keymaps')
 require('core.options')
+require('core.base-highlight')
 

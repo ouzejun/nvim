@@ -2,18 +2,17 @@
 -- | A | B | C                             X | Y | Z |
 -- +-------------------------------------------------+
 function GitRootToParentDirectory()
-    local git_cmd = "git -C " .. vim.fn.expand('%:p:h') .. " rev-parse --show-toplevel"
-    local git_root = vim.fn.systemlist(git_cmd)[1]
-    if vim.v.shell_error ~= 0 then
-        return '' -- 不在 Git 仓库中，返回空字符串
-    end
+  local git_cmd = "git -C " .. vim.fn.expand('%:p:h') .. " rev-parse --show-toplevel"
+  local git_root = vim.fn.systemlist(git_cmd)[1]
+  if vim.v.shell_error ~= 0 then
+    return '' -- 不在 Git 仓库中，返回空字符串
+  end
 
-    local file_path = vim.fn.expand('%:p')
-    local relative_path = vim.fn.fnamemodify(file_path, ':.:h')
+  local file_path = vim.fn.expand('%:p')
+  local relative_path = vim.fn.fnamemodify(file_path, ':.:h')
 
-    return relative_path
+  return relative_path
 end
-
 
 local colors = {
   black        = '#51576D',
@@ -78,50 +77,50 @@ local gruvbox = {
 
 
 return {
-    {
-        'nvim-lualine/lualine.nvim',
-	dependencies = { 'nvim-tree/nvim-web-devicons' },
-	config = function()
-	    require('lualine').setup({
-                options = {
-                    icons_enabled = true,
-                    theme = gruvbox,
-                    component_separators = { left = '', right = ''},
-                    section_separators = {},
-                    disabled_filetypes = {
-                        statusline = {},
-                        winbar = {},
-	            },
-                    ignore_focus = {},
-                    always_divide_middle = true,
-                    globalstatus = false,
-                    refresh = {
-                        statusline = 1000,
-                        tabline = 1000,
-                        winbar = 1000,
-                    }
-                },
-                sections = {
-                    lualine_a = {'mode'},
-                    lualine_b = {'branch', 'diff', 'diagnostics'},
-                    lualine_c = {GitRootToParentDirectory, 'filename'},
-                    lualine_x = {'encoding', 'filetype'},
-                    lualine_y = {'progress'},
-                    lualine_z = {'location'}
-                },
-                inactive_sections = {
-                    lualine_a = {},
-                    lualine_b = {},
-                    lualine_c = {'filename'},
-                    lualine_x = {'location'},
-                    lualine_y = {},
-                    lualine_z = {}
-                },
-                tabline = {},
-                winbar = {},
-                inactive_winbar = {},
-                extensions = {},
-	    })
-	end
-    }
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('lualine').setup({
+        options = {
+          icons_enabled = true,
+          theme = gruvbox,
+          component_separators = { left = '', right = ''},
+          section_separators = {},
+          disabled_filetypes = {
+            statusline = {},
+            winbar = {},
+          },
+          ignore_focus = {},
+          always_divide_middle = true,
+          globalstatus = false,
+          refresh = {
+            statusline = 1000,
+            tabline = 1000,
+            winbar = 1000,
+          }
+        },
+        sections = {
+          lualine_a = {'mode'},
+          lualine_b = {'branch', 'diff', 'diagnostics'},
+          lualine_c = {GitRootToParentDirectory, 'filename'},
+          lualine_x = {'encoding', 'filetype'},
+          lualine_y = {'progress'},
+          lualine_z = {'location'}
+        },
+        inactive_sections = {
+          lualine_a = {},
+          lualine_b = {},
+          lualine_c = {'filename'},
+          lualine_x = {'location'},
+          lualine_y = {},
+          lualine_z = {}
+        },
+        tabline = {},
+        winbar = {},
+        inactive_winbar = {},
+        extensions = {},
+      })
+    end
+  }
 }
