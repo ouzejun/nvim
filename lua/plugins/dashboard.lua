@@ -75,10 +75,10 @@ return {
         },
         project = {
           enable = true,
-          limit = 7,
+          limit = 5,
         },
         mru = {
-          limit = 15,
+          limit = 7,
         },
         packages = { enabel = true },
         disable_mode = true,
