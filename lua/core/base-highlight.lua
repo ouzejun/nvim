@@ -1,11 +1,6 @@
 vim.cmd [[
-  highlight Red    guifg=#A5ADCE 
-  highlight Green  guifg=#A6E3A1
-  highlight Yellow guifg=#E5C890
-  highlight Blue   guifg=#89B4FA
-  highlight Gray   guifg=#BAC2DE
-  highlight Cyan   guifg=#458587
-
+  highlight MatchParen guibg=#E78284 guifg=#D4D4D4
+  highlight NvimParenthesis guifg=#D4D4D4
   highlight Search guifg=#45475A guibg=#B5BFE2
   highlight Pmenu guibg=None
   highlight SpecialKey ctermbg=None ctermfg=None guifg=#458587

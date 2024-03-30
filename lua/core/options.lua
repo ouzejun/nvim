@@ -7,10 +7,6 @@ syntax = "on"
 opt.relativenumber = true
 opt.number = true
 
--- 括号高亮
-
--- 上限80字符
-
 -- 防止包裹
 opt.wrap = true
 
@@ -53,7 +49,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "java",
-    command = [[setlocal shiftwidth=4 tabstop=4 expandtab]]
+    command = [[setlocal shiftwidth=2 tabstop=2 expandtab]]
 })
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "lua",

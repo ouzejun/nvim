@@ -1,9 +1,9 @@
 local keymap = vim.keymap
 -- accept the current suggestion
 keymap.set('i', '<a-m>', 'copilot#Accept("<CR>")', {
-    expr = true,
-    replace_keycodes = false
-    })
+  expr = true,
+  replace_keycodes = false
+})
 vim.g.copilot_no_tab_map = true
 -- accept the current suggestion and move to the next one
 keymap.set('i', '<a-w>', '<Plug>(copilot-accept-word)')
@@ -18,7 +18,8 @@ keymap.set('i', '<a-c>', '<Plug>(copilot-cancel)')
 
 
 return{
-    {
-        "github/copilot.vim",
-    }   
+  {
+    "github/copilot.vim",
+    
+  }
 }
