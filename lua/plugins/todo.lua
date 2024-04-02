@@ -8,6 +8,8 @@ vim.keymap.set("n", "tp", function()
     keywords = {"TODO", "ERROR", "WARN", "HACK", "OPTM", "NOTE", "TEST", "BUGS",
       "DEAD"},})
 end, { desc = "Previous error/warning todo comment" })
+vim.keymap.set("n", "tt", ":TodoTelescope<CR>", { desc = "Toggle todo telescope" })
+vim.keymap.set("n", "ta", ":TodoQuickFix<CR>", { desc = "Toggle todo telescope" })
 
 return {
   "folke/todo-comments.nvim",
@@ -22,10 +24,11 @@ return {
       WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
       OPTM = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
       NOTE = { icon = "󰎞 ", color = "hint", alt = { "INFO" } },
-      DEAD = { icon = "󱑀 ", color = "dead", alt = { "INFO" } },
+      DEAD = { icon = "󱑀 ", color = "dead", },
       TEST = { icon = "󰙨 ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-      BUGS = { icon = " ", color = "error", alt = { "BUG", "FIXED" } },
+      BUGS = { icon = " ", color = "bugs", alt = { "BUG", "FIXED" } },
       INFO = { icon = " ", color = "info" },
+      MARK = { icon = "󱎥 ", color = "mark" },
     },
     colors = {
       hack = { bg = "#FBBF24"},
@@ -34,17 +37,20 @@ return {
       todo = { bg = '#E78284' },
       hint = { "LspDiagnosticsDefaultHint", "#10B981" },
       test = { "LspDiagnosticsDefaultHint", "#92b2f7" },
-      dead = { bg = "#F87171" },
+      dead = { bg = "#0799fa" },
       info = { bg = "#cb99f7" },
+      mark = { bg = "#ffd700" },
+      bugs = { bg = "#9eacb5" },
     },
   }
 }
--- TODO: Add a keymap to jump to previous todo
--- HACK: 
--- WARN:
--- OPTM: aaa
--- NOTE:
--- DEAD:
--- TEST:
--- BUGS:
--- INFO:
+-- TODO: example
+-- HACK: example
+-- WARN: example
+-- OPTM: example
+-- NOTE: example
+-- DEAD: example
+-- TEST: example
+-- BUGS: example
+-- INFO: example
+-- MARK: example

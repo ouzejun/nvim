@@ -10,6 +10,8 @@ local function my_on_attach(bufnr)
       buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
 
+  vim.keymap.set('n', 'o',
+    api.node.open.edit, opts('Open'))
   vim.keymap.set('n', 'w',
     api.tree.change_root_to_node, opts('CD'))
   vim.keymap.set('n', 'a',
@@ -24,6 +26,8 @@ local function my_on_attach(bufnr)
     api.fs.copy.filename, opts('Copy Name'))
   vim.keymap.set('n', 'yp',
     api.fs.copy.relative_path, opts('Copy Relative Path'))
+  vim.keymap.set('n', '<Tab>',
+    api.node.open.preview, opts('Open Preview'))
 
 end
 
@@ -39,4 +43,11 @@ return {
       on_attach = my_on_attach,
     }
   end,
+  update_to_buf_dir = {
+    enable = true,
+    auto_open = true,
+  },
+  diagnostics = {
+    enable = true,
+  },
 }

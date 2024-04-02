@@ -88,10 +88,10 @@ return {
           component_separators = { left = '', right = ''},
           section_separators = {},
           disabled_filetypes = {
-            statusline = {},
-            winbar = {},
+            statusline = {"ft"},
+            winbar = {"ft"},
           },
-          ignore_focus = {},
+          ignore_focus = {"nvim-tree"},
           always_divide_middle = true,
           globalstatus = false,
           refresh = {
@@ -119,7 +119,7 @@ return {
         tabline = {},
         winbar = {},
         inactive_winbar = {},
-        extensions = {},
+        extensions = {'nvim-tree', 'nvim-dap-ui'},
       })
     end
   }

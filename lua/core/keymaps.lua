@@ -26,6 +26,9 @@ keymap.set("v", "I", ":m '<-2<CR>gv=gv")
 -- 单词移动
 keymap.set("v", "<c-n>", "b")
 keymap.set("v", "<a-n>", "e")
+-- 顶部底部
+keymap.set("v", "h", "gg")
+keymap.set("v", "<s-h>", "G")
 
 -- ----------普通模式----------
 -- 上下左右移动
@@ -37,23 +40,23 @@ keymap.set("n", "<s-i>", "5<Up>")
 keymap.set("n", "<s-k>", "5<Down>")
 keymap.set("n", "<s-j>", "5<Left>")
 keymap.set("n", "<s-l>", "5<Right>")
+
 -- 单词移动
 keymap.set("n", "<c-n>", "b")
 keymap.set("n", "<a-n>", "e")
+
 -- 文首和文尾
 keymap.set("n", "h", "gg")
 keymap.set("n", "<s-h>", "G")
+
 -- 视觉框移动
-keymap.set("n", "<s-m>", "zt5<Up>5<Down>")
-keymap.set("n", "m", "zz")
-keymap.set("n", "<c-m>", "zb5<Down>5<Up>")
+keymap.set("n", "mi", "zt5<Up>5<Down>")
+keymap.set("n", "mm", "zz")
+keymap.set("n", "mk", "zb5<Down>5<Up>", { noremap = true })
 
 -- 进入插入模式
 keymap.set("n", "a", "i")
 keymap.set("n", "<s-a>", "a")
-
--- 往下创建一行空行
-keymap.set("n", "<s-n>", "i<CR>")
 
 -- u键管理
 keymap.set("n", "<c-u>", "<c-r>")
@@ -63,7 +66,6 @@ keymap.set("n", "<s-u>", "<c-r>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- 删除一些不必要容易引起麻烦的键
-keymap.set("n", "q", "<Nop>")
 keymap.set("n", "s", "<Nop>")
 keymap.set("n", "S", "<Nop>")
 keymap.set("n", "r", "<Nop>")
@@ -78,5 +80,8 @@ keymap.set("n", "gH", "<cmd>Lspsaga hover_doc ++keep<CR>")
 keymap.set("n", "gn", "<cmd>Lspsaga diagnostic_jump_next<CR>")
 keymap.set("n", "gt", "<cmd>Lspsaga term_toggle<CR>")
 
--- TSitter
-
+-- 窗口移动
+keymap.set("n", "<leader>l", "<c-w>l")
+keymap.set("n", "<leader>i", "<c-w>k")
+keymap.set("n", "<leader>j", "<c-w>h")
+keymap.set("n", "<leader>k", "<c-w>j")
