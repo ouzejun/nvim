@@ -9,6 +9,7 @@ require('lsp.languages.snip')
 require('lsp.languages.jdtls')
 require('lsp.languages.pylsp')
 require('lsp.languages.lua_ls')
+require('lsp.languages.marksman')
 
 -- dap
 require('dap.languages.jdtls')

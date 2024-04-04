@@ -79,6 +79,7 @@ M.config = function()
 			{ name = "nvim_lsp" },
 			{ name = "nvim_lua" },
 			{ name = "luasnip" },
+      { name = "emoji" },
 		}, {
 			{ name = "buffer" },
 			{ name = "path" },
@@ -104,14 +105,16 @@ M.config = function()
 		},
 	})
 
-	cmp.setup.cmdline(":", {
-		mapping = cmp.mapping.preset.cmdline(),
-		sources = cmp.config.sources({
-			{ name = "path" },
-		}, {
-			{ name = "cmdline" },
-		}),
-	})
+  cmp.setup.cmdline(":", {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+      { name = "path" },
+      }, {
+        { name = "cmdline" },
+      }, {
+        { name = "emoji" },
+      }),
+  })
 end
 
 

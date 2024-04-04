@@ -9,7 +9,7 @@ vim.keymap.set("n", "tp", function()
       "DEAD"},})
 end, { desc = "Previous error/warning todo comment" })
 vim.keymap.set("n", "tt", ":TodoTelescope<CR>", { desc = "Toggle todo telescope" })
-vim.keymap.set("n", "ta", ":TodoQuickFix<CR>", { desc = "Toggle todo telescope" })
+vim.keymap.set("n", "tq", ":TodoQuickFix<CR>", { desc = "Toggle todo telescope" })
 
 return {
   "folke/todo-comments.nvim",

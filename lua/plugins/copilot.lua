@@ -20,6 +20,5 @@ keymap.set('i', '<a-c>', '<Plug>(copilot-cancel)')
 return{
   {
     "github/copilot.vim",
-    
   }
 }

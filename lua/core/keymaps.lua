@@ -27,7 +27,7 @@ keymap.set("v", "I", ":m '<-2<CR>gv=gv")
 keymap.set("v", "<c-n>", "b")
 keymap.set("v", "<a-n>", "e")
 -- 顶部底部
-keymap.set("v", "h", "gg")
+keymap.set("v", "hh", "gg")
 keymap.set("v", "<s-h>", "G")
 
 -- ----------普通模式----------
@@ -46,7 +46,7 @@ keymap.set("n", "<c-n>", "b")
 keymap.set("n", "<a-n>", "e")
 
 -- 文首和文尾
-keymap.set("n", "h", "gg")
+keymap.set("n", "hh", "gg")
 keymap.set("n", "<s-h>", "G")
 
 -- 视觉框移动
@@ -85,3 +85,12 @@ keymap.set("n", "<leader>l", "<c-w>l")
 keymap.set("n", "<leader>i", "<c-w>k")
 keymap.set("n", "<leader>j", "<c-w>h")
 keymap.set("n", "<leader>k", "<c-w>j")
+
+-- copilot chat
+keymap.set("n", "<leader>hc", "<cmd>CopilotChatToggle<CR>")
+keymap.set("v", "<leader>hc", "<cmd>CopilotChatCommit<CR>")
+keymap.set("v", "<leader>hf", "<cmd>CopilotChatFix<CR>")
+keymap.set("v", "<leader>ho", "<cmd>CopilotChatOptimize<CR>")
+keymap.set("n", "<leader>hr", "<cmd>CopilotChatReset<CR>")
+keymap.set("n", "<leader>hd", "<cmd>CopilotChatDocs<CR>")
+keymap.set("v", "<leader>hd", "<cmd>CopilotChatDocs<CR>")
