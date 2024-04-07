@@ -12,6 +12,8 @@ return {
       window = {
         layout = "float",
       },
+      -- lazy.nvim keys
+      -- Quick chat with Copilot
     },
     -- See Commands section for default commands if you want to lazy load on them
   },

@@ -54,6 +54,16 @@ keymap.set("n", "mi", "zt5<Up>5<Down>")
 keymap.set("n", "mm", "zz")
 keymap.set("n", "mk", "zb5<Down>5<Up>", { noremap = true })
 
+-- 窗口制作
+keymap.set("n", "|", ":vsplit<CR>")
+keymap.set("n", "-", "<cmd>split<CR>")
+
+-- 窗口移动
+keymap.set("n", "<leader>l", "<c-w>l")
+keymap.set("n", "<leader>i", "<c-w>k")
+keymap.set("n", "<leader>j", "<c-w>h")
+keymap.set("n", "<leader>k", "<c-w>j")
+
 -- 进入插入模式
 keymap.set("n", "a", "i")
 keymap.set("n", "<s-a>", "a")
@@ -70,6 +80,7 @@ keymap.set("n", "s", "<Nop>")
 keymap.set("n", "S", "<Nop>")
 keymap.set("n", "r", "<Nop>")
 
+-- ----------插件----------
 -- lsp
 keymap.set("n", "ga", "<cmd>Lspsaga code_action<CR>")
 keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
@@ -79,18 +90,35 @@ keymap.set("n", "gh", "<cmd>Lspsaga hover_doc<CR>")
 keymap.set("n", "gH", "<cmd>Lspsaga hover_doc ++keep<CR>")
 keymap.set("n", "gn", "<cmd>Lspsaga diagnostic_jump_next<CR>")
 keymap.set("n", "gt", "<cmd>Lspsaga term_toggle<CR>")
-
--- 窗口移动
-keymap.set("n", "<leader>l", "<c-w>l")
-keymap.set("n", "<leader>i", "<c-w>k")
-keymap.set("n", "<leader>j", "<c-w>h")
-keymap.set("n", "<leader>k", "<c-w>j")
+keymap.set("n", "go", "<cmd>Lspsaga outline<CR>")
+keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>")
 
 -- copilot chat
+-- normal
 keymap.set("n", "<leader>hc", "<cmd>CopilotChatToggle<CR>")
-keymap.set("v", "<leader>hc", "<cmd>CopilotChatCommit<CR>")
+keymap.set("n", "<leader>hd", "<cmd>CopilotChatDocs<CR>")
+keymap.set("n", "<leader>ho", "<cmd>CopilotChatOptimize<CR>")
+keymap.set("n", "<leader>hf", "<cmd>CopilotChatFix<CR>")
+keymap.set("n", "<leader>hq",
+  function()
+    local input = vim.fn.input("Quick Chat: ")
+    if input ~= "" then
+      require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+    end
+  end
+)
+-- visual
+keymap.set("v", "<leader>hd", "<cmd>CopilotChatDocs<CR>")
 keymap.set("v", "<leader>hf", "<cmd>CopilotChatFix<CR>")
 keymap.set("v", "<leader>ho", "<cmd>CopilotChatOptimize<CR>")
-keymap.set("n", "<leader>hr", "<cmd>CopilotChatReset<CR>")
-keymap.set("n", "<leader>hd", "<cmd>CopilotChatDocs<CR>")
-keymap.set("v", "<leader>hd", "<cmd>CopilotChatDocs<CR>")
+keymap.set("v", "<leader>hq",
+  function()
+    local input = vim.fn.input("Quick Chat: ")
+    if input ~= "" then
+      require("CopilotChat").ask(input, { selection = require("CopilotChat.select").visual })
+    end
+  end
+)
+
+-- yankband
+keymap.set("n", "<leader>y", "<cmd>YankBank<CR>", { noremap = true })

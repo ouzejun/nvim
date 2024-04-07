@@ -66,10 +66,10 @@ return {
         },
         project = {
           enable = true,
-          limit = 5,
+          limit = 7,
         },
         mru = {
-          limit = 7,
+          limit = 14,
         },
         packages = { enabel = true },
         disable_mode = true,

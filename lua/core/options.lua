@@ -38,6 +38,12 @@ end
 -- 调用函数设置背景颜色
 set_signcolumn_bg_color()
 
+
+-- 设置 Neovim 窗口分割线的字符
+-- `vert` 选项设置垂直分割线的字符
+-- `hor` 选项设置水平分割线的字符
+vim.o.fillchars = "vert:│,horiz:─,eob: "
+
 -- 设置 tab 为两个空格
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
