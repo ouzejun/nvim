@@ -28,6 +28,9 @@ local function my_on_attach(bufnr)
     api.fs.copy.relative_path, opts('Copy Relative Path'))
   vim.keymap.set('n', '<Tab>',
     api.node.open.preview, opts('Open Preview'))
+  vim.keymap.set('n', 'q',
+    api.tree.close, opts('Close'))
+
 
 end
 

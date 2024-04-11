@@ -1,6 +1,8 @@
 {
     "diagnostics.disable": [
         "param-type-mismatch",
-        "undefined-global"
+        "undefined-global",
+        "unused-local",
+        "lowercase-global"
     ]
 }

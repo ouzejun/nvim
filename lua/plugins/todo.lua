@@ -3,7 +3,7 @@ vim.keymap.set("n", "tn", function()
     keywords = {"TODO", "ERROR", "WARN", "HACK", "OPTM", "NOTE", "TEST", "BUGS",
       "DEAD"},})
 end, { desc = "Next error/warning todo comment" })
-vim.keymap.set("n", "tp", function()
+vim.keymap.set("n", "tm", function()
   require("todo-comments").jump_prev({
     keywords = {"TODO", "ERROR", "WARN", "HACK", "OPTM", "NOTE", "TEST", "BUGS",
       "DEAD"},})

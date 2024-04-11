@@ -74,21 +74,27 @@ M.config = function()
           fallback()
         end
       end, { 'i', 's' }),
-		}),
-		sources = cmp.config.sources({
-			{ name = "nvim_lsp" },
-			{ name = "nvim_lua" },
-			{ name = "luasnip" },
-      { name = "emoji" },
-		}, {
-			{ name = "buffer" },
-			{ name = "path" },
-		}, {
-			{ name = "neorg" },
-		}),
-
-		formatting = {
-			format = function(entry, vim_item)
+      ['<S-Tab>'] = cmp.mapping(function(fallback)
+        if cmp.visible() then
+          cmp.select_prev_item()
+        elseif luasnip.jumpable(-1) then
+          luasnip.jump(-1)
+        else
+          fallback()
+        end
+      end, { 'i', 's' }),
+    }),
+    sources = {
+      { name = 'nvim_lsp', priority = 3 },
+      { name = 'nvim_lua', priority = 2 },
+      { name = 'luasnip', priority = 4 },
+      { name = 'buffer', priority = 4 },
+      { name = 'path', priority = 5 },
+      -- { name = 'neorg', priority = 6 },
+      { name = 'emoji', priority = 7 },
+    },
+    formatting = {
+      format = function(entry, vim_item)
 				-- Kind icons
 				vim_item.kind = string.format("%s %s",
 				  kind_icons[vim_item.kind], vim_item.kind)
@@ -98,22 +104,21 @@ M.config = function()
 					nvim_lsp = "[LSP]",
 					luasnip  = "[LuaSnip]",
 					nvim_lua = "[NvimAPI]",
-					path     = "[Path]",
-				})[entry.source.name]
-				return vim_item
-			end,
-		},
-	})
+          path     = "[Path]",
+        })[entry.source.name]
+        return vim_item
+      end,
+    },
+  })
 
   cmp.setup.cmdline(":", {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
       { name = "path" },
-      }, {
+    }, {
         { name = "cmdline" },
-      }, {
-        { name = "emoji" },
-      }),
+      }
+    ),
   })
 end
 

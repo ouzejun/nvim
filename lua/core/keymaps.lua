@@ -10,9 +10,6 @@ keymap.set("i", "<c-j>", "<Left>")
 keymap.set("i", "<c-l>", "<Right>")
 keymap.set("i", "<c-u>", "<Up>")
 keymap.set("i", "<c-k>", "<Down>")
--- 单词移动
-keymap.set("i", "<c-n>", "<Esc>bi")
-keymap.set("i", "<a-n>", "<Esc>ea")
 
 -- ----------视觉模式----------
 -- 上下左右移动
