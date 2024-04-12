@@ -12,7 +12,9 @@ require('lsp.languages.lua_ls')
 require('lsp.languages.marksman')
 
 -- dap
+require('dap.dapui')
 require('dap.languages.jdtls')
+require('dap.languages.python')
 
 -- core
 require('core.keymaps')

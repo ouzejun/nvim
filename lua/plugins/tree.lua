@@ -30,6 +30,8 @@ local function my_on_attach(bufnr)
     api.node.open.preview, opts('Open Preview'))
   vim.keymap.set('n', 'q',
     api.tree.close, opts('Close'))
+  vim.keymap.set('n', 'p',
+    api.fs.paste, opts('Paste'))
 
 
 end

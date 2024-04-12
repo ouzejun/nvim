@@ -61,6 +61,12 @@ keymap.set("n", "<leader>i", "<c-w>k")
 keymap.set("n", "<leader>j", "<c-w>h")
 keymap.set("n", "<leader>k", "<c-w>j")
 
+-- 窗口大小
+keymap.set("n", ">", "<c-w>+")  -- 增加窗口高度
+keymap.set("n", "<", "<c-w>-")  -- 减少窗口高度
+keymap.set("n", ",", "<c-w><")  -- 减少窗口宽度
+keymap.set("n", ".", "<c-w>>")  -- 增加窗口宽度
+
 -- 进入插入模式
 keymap.set("n", "a", "i")
 keymap.set("n", "<s-a>", "a")
