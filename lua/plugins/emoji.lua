@@ -18,9 +18,4 @@ return {
     -- is not vim.fn.stdpath("data") .. "/lazy/
   },
   lazy = false,
-  configs = function ()
-    require("emoji").insert_kaomoji()
-    require("emoji").insert_kaomoji_by_group()
-    require("emoji").insert()
-  end
 }
