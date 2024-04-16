@@ -18,5 +18,10 @@ return {
       },
     }
   },
+  require('lspconfig').jdtls.setup({
+    java_debug_adapter = {
+      enable = true,
+    },
+  })
 }
 

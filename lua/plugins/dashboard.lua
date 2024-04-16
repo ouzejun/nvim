@@ -1,3 +1,4 @@
+vim.keymap.set("n", "hd", ":Dashboard<CR>")
 vim.cmd [[
   highlight DashboardHeader guifg=#8CAAEE
   highlight DashboardFooter guifg=#F38BA8
@@ -20,6 +21,11 @@ return {
       theme = 'hyper',
       config = {
         header = {
+          "",
+          "",
+          "",
+          "",
+          "",
           "███╗     ██╗ ███████╗  ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
           "██╔██╗   ██║ ██╔════╝ ██╔═══██╗ ██║   ██║ ██║ ████╗ ████║",
           "██║╚██╗  ██║ █████╗   ██║   ██║ ██║   ██║ ██║ ██╔████╔██║",

@@ -8,6 +8,8 @@ require('lsp.init')
 
 -- dap
 require('dap.dapui')
+require('dap.languages.jdtls')
+require('dap.languages.python')
 
 -- core
 require('core.keymaps')

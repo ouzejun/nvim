@@ -11,6 +11,8 @@ return {
       -- See Configuration section for rest
       window = {
         layout = "float",
+        width = 0.7,
+        height = 0.9,
       },
       -- lazy.nvim keys
       -- Quick chat with Copilot

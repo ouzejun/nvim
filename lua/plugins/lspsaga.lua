@@ -39,6 +39,9 @@ return {
           tab = '<nop>',
         }
       },
+      float_terminal = {
+        win_width = 30,
+      },
     })
   end,
 }
