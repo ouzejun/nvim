@@ -76,6 +76,14 @@ return {
             action = 'Lspsaga term_toggle',
             key = 't',
           },
+          {
+            icon = '󰙅 ',
+            icon_hl = "DashboardShortcut4",
+            desc = 'File-tree',
+            group = 'DashboardShortcut4',
+            action = 'Neotree dir=./ toggle float',
+            key = 'd',
+          }
         },
         project = {
           enable = true,

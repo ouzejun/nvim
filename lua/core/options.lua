@@ -28,7 +28,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- 设置 signcolumn 始终显示，可以根据需要更改这个设置
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes:3"
 -- 定义一个函数来设置 SignColumn 的背景颜色
 local function set_signcolumn_bg_color()
   -- 使用 nvim_set_hl API 函数设置 SignColumn 的背景颜色

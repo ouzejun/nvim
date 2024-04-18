@@ -5,8 +5,11 @@ return {
     local configs = require("nvim-treesitter.configs")
 
     configs.setup({
-      ensure_installed = { "c", "lua", "python", "java" },
-      highlight = { enable = true, },
+      -- ensure_installed = "all",
+      highlight = {
+        enable = true,
+        disable = { 'latexs' },  -- list of language that will be disabled
+      },
       indent = { enable = true },
       incremental_selection = {
         enable = true,

@@ -12,7 +12,7 @@ return {
       window = {
         layout = "float",
         width = 0.7,
-        height = 0.9,
+        height = 0.8,
       },
       -- lazy.nvim keys
       -- Quick chat with Copilot

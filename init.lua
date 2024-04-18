@@ -5,6 +5,7 @@ require('lazy-init')
 
 -- lsp
 require('lsp.init')
+require('lsp.languages.snip')
 
 -- dap
 require('dap.dapui')

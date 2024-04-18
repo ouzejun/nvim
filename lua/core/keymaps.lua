@@ -126,3 +126,7 @@ keymap.set("v", "<leader>hq",
 
 -- yankband
 keymap.set("n", "<leader>y", "<cmd>YankBank<CR>", { noremap = true })
+
+-- neo tree
+keymap.set("n", "<leader>T", "<cmd>Neotree dir=./ toggle left<CR>", {})
+keymap.set("n", "<leader>t", "<cmd>Neotree dir=./ toggle float<CR>", {})
