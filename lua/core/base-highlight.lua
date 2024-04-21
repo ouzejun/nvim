@@ -40,13 +40,10 @@ vim.cmd [[
   highlight lualine_b_diff_removed_terminal guibg=#626880 guifg=#74b362
   highlight lualine_b_diff_removed_inactive guibg=#626880 guifg=#74b362
 
-  highlight DiffAdd guibg=none guifg=#629eb3
-  highlight DiffChange guibg=none guifg=#cc6a95
-  highlight DiffDelete guibg=none guifg=#74b362
-  highlight GitSignsStagedAdd guibg=none guifg=#629eb3
+  highlight DiffAdd guibg=none guifg=#9ACD32
+  highlight DiffChange guibg=none guifg=#EEB422
+  highlight DiffDelete guibg=none guifg=#EE6363
+  highlight GitSignsStagedAdd guibg=#9ACD32 guifg=#B5BFE2
   highlight GitSignsStagedChange guibg=none guifg=#629eb3
   highlight GitSignsStagedDelete guibg=none guifg=#629eb3
-  highlight GitSignsStagedAdd guibg=none guifg=#629eb3
-  highlight GitSignsStagedAdd guibg=none guifg=#629eb3
-  highlight GitSignsStagedAdd guibg=none guifg=#629eb3
 ]]

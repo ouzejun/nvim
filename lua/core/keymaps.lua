@@ -82,6 +82,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "s", "<Nop>")
 keymap.set("n", "S", "<Nop>")
 keymap.set("n", "r", "<Nop>")
+keymap.set("n", "q", "<Nop>")
 
 -- ----------插件----------
 -- lsp

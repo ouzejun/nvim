@@ -77,7 +77,7 @@ return {
             key = 't',
           },
           {
-            icon = '󰙅 ',
+            icon = '󰺔 ',
             icon_hl = "DashboardShortcut4",
             desc = 'File-tree',
             group = 'DashboardShortcut4',
