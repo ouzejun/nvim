@@ -1,6 +1,3 @@
-vim.keymap.set("n", "<leader>fe", "<cmd>Telescope emoji<CR>",
-  { noremap = true, silent = true })
-
 return {
   "allaman/emoji.nvim",
   version = "1.0.0", -- optionally pin to a tag

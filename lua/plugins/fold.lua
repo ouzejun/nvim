@@ -92,11 +92,5 @@ return {
     end
     opts["fold_virt_text_handler"] = handler
     require("ufo").setup(opts)
-    vim.keymap.set("n", "zO", require("ufo").openAllFolds)
-    vim.keymap.set("n", "zZ", require("ufo").closeAllFolds)
-    vim.keymap.set("n", "zz", "za")
-    vim.keymap.set("n", "zp", require("ufo").peekFoldedLinesUnderCursor)
-    vim.keymap.set("n", "zw", require("ufo").goPreviousClosedFold)
-    vim.keymap.set("n", "zs", require("ufo").openFoldsExceptKinds)
   end,
 }
