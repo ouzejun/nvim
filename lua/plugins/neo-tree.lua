@@ -53,6 +53,7 @@ return {
           ["x"] = "cut_to_clipboard",
           ["p"] = "paste_from_clipboard",
           ["q"] = "close_window",
+
           ["R"] = "refresh",
           ["o"] = {
             "show_help",
