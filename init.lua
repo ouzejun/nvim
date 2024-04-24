@@ -44,6 +44,11 @@ require('core.options.codesnap')
 
 -- highlights
 require('core.highlights.base')
+require('core.highlights.buffer')
+require('core.highlights.dashboard')
+require('core.highlights.flod')
+require('core.highlights.ibl')
+require('core.highlights.lspsaga')
 
 -- neovide
 require('core.neovide')
