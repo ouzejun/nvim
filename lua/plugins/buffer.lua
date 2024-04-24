@@ -17,16 +17,27 @@ vim.cmd [[
   highlight BufferLineInfoDiagnosticSelected guifg=#81a2ac guibg=none gui=bold
 ]]
 
+
 return {
   'akinsho/bufferline.nvim',
   dependencies = 'nvim-tree/nvim-web-devicons',
   config = function()
     require('bufferline').setup {
+      highlights = {
+        tab_separator_selected = {
+          underline = true,
+        },
+      },
+
       options = {
         icons = 'both',
         icon_separator_active = '▎',
         icon_separator_inactive = '▎',
         icon_close_tab_modified = '●',
+
+        indicator = {
+          icon = '▎', -- this should be omitted if indicator style is not 'icon'
+        },
 
         offsets = {
           {
@@ -53,8 +64,8 @@ return {
             s = s .. n .. sym
           end
           return s
-        end
-      }
+        end,
+      },
     }
   end,
 }

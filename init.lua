@@ -4,7 +4,10 @@ require('lazy-init')
 -- lsp
 require('lsp.init')
 require('lsp.languages.bash')
+require('lsp.languages.html')
 require('lsp.languages.jdtls')
+require('lsp.languages.js')
+require('lsp.languages.json')
 require('lsp.languages.lua_ls')
 require('lsp.languages.marksman')
 require('lsp.languages.pylsp')
@@ -14,7 +17,9 @@ require('lsp.languages.typst')
 
 -- dap
 require('dap.dapui')
+require('dap.languages.bash')
 require('dap.languages.jdtls')
+require('dap.languages.nodejs')
 require('dap.languages.python')
 
 -- core
@@ -35,6 +40,7 @@ require('core.keymaps.yankbank')
 
 -- options
 require('core.options.base')
+require('core.options.codesnap')
 
 -- highlights
 require('core.highlights.base')

@@ -2,7 +2,7 @@ local dap = require('dap')
 
 dap.adapters.python = function(cb, config)
   if config.request == 'attach' then
-    local port = (config.connect or config).port
+    local port = 5007
     local host = (config.connect or config).host or '127.0.0.1'
     cb({
       type = 'server',

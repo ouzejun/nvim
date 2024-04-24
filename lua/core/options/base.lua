@@ -1,6 +1,7 @@
 local opt = vim.opt
 vim.opt.termguicolors = true
 
+-- 语法高亮
 syntax = "on"
 
 -- 行号
@@ -29,41 +30,37 @@ opt.smartcase = true
 
 -- 设置 signcolumn 始终显示，可以根据需要更改这个设置
 vim.opt.signcolumn = "yes:3"
--- 定义一个函数来设置 SignColumn 的背景颜色
-local function set_signcolumn_bg_color()
-  -- 使用 nvim_set_hl API 函数设置 SignColumn 的背景颜色
-  -- 这里以深蓝色为例，你可以根据需要更改颜色代码
-  vim.api.nvim_set_hl(0, "SignColumn", {bg = NONE})
-end
--- 调用函数设置背景颜色
-set_signcolumn_bg_color()
+vim.api.nvim_set_hl(0, "SignColumn", {bg = NONE})
 
 
 -- 设置 Neovim 窗口分割线的字符
 -- `vert` 选项设置垂直分割线的字符
 -- `hor` 选项设置水平分割线的字符
+-- `eob` 表示余下的没有代码部分的符号
 vim.o.fillchars = "vert:│,horiz:─,eob: "
 
--- 设置 tab 为两个空格
+-- 设置默认 tab 为两个空格
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "python",
-    command = [[setlocal shiftwidth=4 tabstop=4 expandtab]]
+  pattern = "python",
+  command = [[setlocal shiftwidth=4 tabstop=4 expandtab]]
 })
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "java",
-    command = [[setlocal shiftwidth=2 tabstop=2 expandtab]]
+  pattern = "java",
+  command = [[setlocal shiftwidth=2 tabstop=2 expandtab]]
 })
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "lua",
-    command = [[setlocal shiftwidth=2 tabstop=2 expandtab]]
+  pattern = "lua",
+  command = [[setlocal shiftwidth=2 tabstop=2 expandtab]]
 })
-
--- codesnap
-require("codesnap").setup({
-  save_path = "~/Pictures/codesnap/",
-  watermark = "yangtao~",
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "html",
+  command = [[setlocal shiftwidth=2 tabstop=2 expandtab]]
+})
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "javascript",
+  command = [[setlocal shiftwidth=2 tabstop=2 expandtab]]
 })

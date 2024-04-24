@@ -1,4 +1,5 @@
 local dap = require('dap')
+
 dap.adapters.java = function(callback)
   callback({
     type = 'server';

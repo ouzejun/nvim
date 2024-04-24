@@ -3,8 +3,6 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- ----------插入模式----------
--- 删除
-keymap.set("i", "<c-d>", "<Left><Del>")
 -- 上下左右移动
 keymap.set("i", "<c-j>", "<Left>")
 keymap.set("i", "<c-l>", "<Right>")
