@@ -18,6 +18,11 @@ return {
             ['q'] = require('telescope.actions').close,
           }
         },
+
+        layout_config = {
+          width = 0.91,  -- 设置宽度为屏幕宽度的75%
+          height = 0.99,  -- 设置高度为屏幕高度的50%
+        },
       }
     }
   end,

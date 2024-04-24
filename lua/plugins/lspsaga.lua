@@ -31,7 +31,7 @@ return {
         }
       },
       float_terminal = {
-        win_width = 30,
+        win_width = 50,
       },
     })
   end,
