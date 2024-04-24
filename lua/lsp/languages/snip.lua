@@ -19,7 +19,7 @@ ls.add_snippets("java", {
           i(1, "body"),
           t({ "", "}" })
         }
-      return sn(nil, node)
+        return sn(nil, node)
       end, {}),
     }),
 
@@ -49,7 +49,7 @@ ls.add_snippets("java", {
           i(2),
           t({ "", "}" })
         }
-      return sn(nil, node)
+        return sn(nil, node)
       end, {}),
     }),
 
@@ -67,7 +67,7 @@ ls.add_snippets("java", {
           i(2),
           t({ "", "}" })
         }
-      return sn(nil, node)
+        return sn(nil, node)
       end, {}),
     }),
 
@@ -83,7 +83,7 @@ ls.add_snippets("java", {
           i(1),
           t({ "", "}" })
         }
-      return sn(nil, node)
+        return sn(nil, node)
       end, {}),
     }),
 
@@ -103,7 +103,7 @@ ls.add_snippets("java", {
           i(3),
           t({ "", "}" })
         }
-      return sn(nil, node)
+        return sn(nil, node)
       end, {}),
     }),
 
@@ -125,7 +125,7 @@ ls.add_snippets("java", {
           i(4),
           t({ "", "}" })
         }
-      return sn(nil, node)
+        return sn(nil, node)
       end, {}),
     })
 })
@@ -157,4 +157,3 @@ ls.add_snippets("all", {
     end, {}),
   }),
 })
-
