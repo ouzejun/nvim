@@ -16,6 +16,7 @@ ls.add_snippets("java", {
       d(1, function(_, parent)
         local node =  {
           t("public static void main (String[] args) {"),
+          t({"", "\t"}),
           i(1, "body"),
           t({ "", "}" })
         }
