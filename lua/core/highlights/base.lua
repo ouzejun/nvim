@@ -23,6 +23,12 @@ vim.cmd [[
   highlight TelescopeSelection guifg=#B5BFE2 guibg=#51576D
   highlight Visual guifg=#A5ADCE guibg=#51576D
   highlight DevIconFedora guifg=#8CAAEE
+  highlight StatusLine guibg=none 
+  highlight StatusLineNC guibg=none 
+  highlight CursorLine guibg=#626880
+
+  highlight Comment gui=italic guifg=#80a0ff
+  highlight Keyword gui=italic,bold guifg=#e5c890
 
   highlight lualine_b_diff_added_normal guibg=#626880 guifg=#629eb3
   highlight lualine_b_diff_added_insert guibg=#626880 guifg=#629eb3

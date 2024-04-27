@@ -49,6 +49,7 @@ require('core.highlights.dashboard')
 require('core.highlights.flod')
 require('core.highlights.ibl')
 require('core.highlights.lspsaga')
+require('core.highlights.neotree')
 
 -- neovide
 require('core.neovide')
