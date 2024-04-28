@@ -15,12 +15,11 @@ keymap.set("v", "i", "<Up>")
 keymap.set("v", "k", "<Down>")
 keymap.set("v", "j", "<Left>")
 keymap.set("v", "l", "<Right>")
+
 -- 批量移动
 keymap.set("v", "K", ":m '>+1<CR>gv=gv")
 keymap.set("v", "I", ":m '<-2<CR>gv=gv")
--- 单词移动
-keymap.set("v", "<c-n>", "b")
-keymap.set("v", "<a-n>", "e")
+
 -- 顶部底部
 keymap.set("v", "hh", "gg")
 keymap.set("v", "<s-h>", "G")
@@ -37,8 +36,10 @@ keymap.set("n", "<s-j>", "5<Left>")
 keymap.set("n", "<s-l>", "5<Right>")
 
 -- 单词移动
-keymap.set("n", "<c-n>", "b")
-keymap.set("n", "<a-n>", "e")
+keymap.set("n", "w", "b")
+keymap.set("n", "e", "w")
+keymap.set("n", "W", "ge")
+keymap.set("n", "E", "e")
 
 -- 文首和文尾
 keymap.set("n", "hh", "gg")

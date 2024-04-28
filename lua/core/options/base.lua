@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local opt = vim.opt
 vim.opt.termguicolors = true
 
