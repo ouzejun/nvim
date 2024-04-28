@@ -8,13 +8,13 @@ return {
       defaults = {
         mappings = {
           i = {
-            ['<C-k>'] = require('telescope.actions').move_selection_next,
-            ['<C-i>'] = require('telescope.actions').move_selection_previous,
+            ['<C-j>'] = require('telescope.actions').move_selection_next,
+            ['<C-k>'] = require('telescope.actions').move_selection_previous,
             ['<C-q>'] = require('telescope.actions').close,
           },
           n = {
-            ['k'] = require('telescope.actions').move_selection_next,
-            ['i'] = require('telescope.actions').move_selection_previous,
+            ['j'] = require('telescope.actions').move_selection_next,
+            ['k'] = require('telescope.actions').move_selection_previous,
             ['q'] = require('telescope.actions').close,
           }
         },

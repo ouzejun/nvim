@@ -10,7 +10,7 @@ return {
       debug = true, -- Enable debugging
       window = {
         layout = "float",
-        width = 0.91,
+        width = 0.90,
         height = 0.85,
       },
     },

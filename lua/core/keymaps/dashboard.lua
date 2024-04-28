@@ -1,3 +1,3 @@
 local keymap = vim.keymap
 
-keymap.set("n", "hd", ":Dashboard<CR>")
+keymap.set("n", "gh", ":Dashboard<CR>")

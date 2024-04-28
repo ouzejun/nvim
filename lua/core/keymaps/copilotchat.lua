@@ -1,11 +1,11 @@
 local keymap = vim.keymap
 
 -- normal
-keymap.set("n", "<leader>hc", "<cmd>CopilotChatToggle<CR>")
-keymap.set("n", "<leader>hd", "<cmd>CopilotChatDocs<CR>")
-keymap.set("n", "<leader>ho", "<cmd>CopilotChatOptimize<CR>")
-keymap.set("n", "<leader>hf", "<cmd>CopilotChatFix<CR>")
-keymap.set("n", "<leader>hq",
+keymap.set("n", "<leader>ic", "<cmd>CopilotChatToggle<CR>")
+keymap.set("n", "<leader>id", "<cmd>CopilotChatDocs<CR>")
+keymap.set("n", "<leader>io", "<cmd>CopilotChatOptimize<CR>")
+keymap.set("n", "<leader>if", "<cmd>CopilotChatFix<CR>")
+keymap.set("n", "<leader>iq",
   function()
     local input = vim.fn.input("Quick Chat: ")
     if input ~= "" then
@@ -14,10 +14,10 @@ keymap.set("n", "<leader>hq",
   end
 )
 -- visual
-keymap.set("v", "<leader>hd", "<cmd>CopilotChatDocs<CR>")
-keymap.set("v", "<leader>hf", "<cmd>CopilotChatFix<CR>")
-keymap.set("v", "<leader>ho", "<cmd>CopilotChatOptimize<CR>")
-keymap.set("v", "<leader>hq",
+keymap.set("v", "<leader>id", "<cmd>CopilotChatDocs<CR>")
+keymap.set("v", "<leader>if", "<cmd>CopilotChatFix<CR>")
+keymap.set("v", "<leader>io", "<cmd>CopilotChatOptimize<CR>")
+keymap.set("v", "<leader>iq",
   function()
     local input = vim.fn.input("Quick Chat: ")
     if input ~= "" then

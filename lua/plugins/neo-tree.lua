@@ -63,10 +63,6 @@ return {
           [">"] = "next_source",
           ["u"] = "show_file_details",
           ["h"] = "toggle_hidden",
-          ["i"] = "",
-          ["k"] = "",
-          ["l"] = "",
-          ["j"] = "",
         }
       },
       filesystem = {

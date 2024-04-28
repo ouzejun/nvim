@@ -4,46 +4,31 @@ local keymap = vim.keymap
 
 -- ----------插入模式----------
 -- 上下左右移动
-keymap.set("i", "<c-j>", "<Left>")
+keymap.set("i", "<c-h>", "<Left>")
 keymap.set("i", "<c-l>", "<Right>")
-keymap.set("i", "<c-u>", "<Up>")
-keymap.set("i", "<c-k>", "<Down>")
+keymap.set("i", "<c-k>", "<Up>")
+keymap.set("i", "<c-j>", "<Down>")
 
 -- ----------视觉模式----------
--- 上下左右移动
-keymap.set("v", "i", "<Up>")
-keymap.set("v", "k", "<Down>")
-keymap.set("v", "j", "<Left>")
-keymap.set("v", "l", "<Right>")
-
 -- 批量移动
-keymap.set("v", "K", ":m '>+1<CR>gv=gv")
-keymap.set("v", "I", ":m '<-2<CR>gv=gv")
-
--- 顶部底部
-keymap.set("v", "hh", "gg")
-keymap.set("v", "<s-h>", "G")
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- ----------普通模式----------
 -- 上下左右移动
-keymap.set("n", "i", "<Up>")
-keymap.set("n", "k", "<Down>")
-keymap.set("n", "j", "<Left>")
+keymap.set("n", "k", "<Up>")
+keymap.set("n", "j", "<Down>")
+keymap.set("n", "h", "<Left>")
 keymap.set("n", "l", "<Right>")
-keymap.set("n", "<s-i>", "5<Up>")
-keymap.set("n", "<s-k>", "5<Down>")
-keymap.set("n", "<s-j>", "5<Left>")
+keymap.set("n", "<s-k>", "5<Up>")
+keymap.set("n", "<s-j>", "5<Down>")
+keymap.set("n", "<s-h>", "5<Left>")
 keymap.set("n", "<s-l>", "5<Right>")
 
 -- 单词移动
 keymap.set("n", "w", "b")
-keymap.set("n", "e", "w")
-keymap.set("n", "W", "ge")
-keymap.set("n", "E", "e")
-
--- 文首和文尾
-keymap.set("n", "hh", "gg")
-keymap.set("n", "<s-h>", "G")
+keymap.set("n", "W", "e")
+keymap.set("n", "E", "ge")
 
 -- 视觉框移动
 keymap.set("n", "mi", "zt5<Up>5<Down>")
@@ -56,9 +41,9 @@ keymap.set("n", "-", "<cmd>split<CR>")
 
 -- 窗口移动
 keymap.set("n", "<leader>l", "<c-w>l")
-keymap.set("n", "<leader>i", "<c-w>k")
-keymap.set("n", "<leader>j", "<c-w>h")
-keymap.set("n", "<leader>k", "<c-w>j")
+keymap.set("n", "<leader>k", "<c-w>k")
+keymap.set("n", "<leader>h", "<c-w>h")
+keymap.set("n", "<leader>j", "<c-w>j")
 
 -- 窗口大小
 keymap.set("n", ">", "<c-w>+")  -- 增加窗口高度
@@ -82,4 +67,6 @@ keymap.set("n", "s", "<Nop>")
 keymap.set("n", "S", "<Nop>")
 keymap.set("n", "r", "<Nop>")
 keymap.set("n", "q", "<Nop>")
+keymap.set("n", "i", "<Nop>")
+keymap.set("n", "I", "<Nop>")
 

@@ -4,7 +4,7 @@ return {
     require("lspsaga").setup({
       use_saga_diagnostic_sign = true,
       ui = {
-        code_action = '󰽭 ',
+        code_action = 'Ą',
         lines = { '└', '├', '│', '─', '┌' }
       },
       symbol_in_winbar = {
