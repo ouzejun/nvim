@@ -29,6 +29,7 @@ vim.cmd [[
 
   highlight Comment gui=italic guifg=#80a0ff
   highlight Keyword gui=italic,bold guifg=#e5c890
+  " highlight @variable gui=italic guifg=
 
   highlight lualine_b_diff_added_normal guibg=#626880 guifg=#629eb3
   highlight lualine_b_diff_added_insert guibg=#626880 guifg=#629eb3
