@@ -46,10 +46,10 @@ keymap.set("n", "<leader>h", "<c-w>h")
 keymap.set("n", "<leader>j", "<c-w>j")
 
 -- 窗口大小
-keymap.set("n", ">", "<c-w>+")  -- 增加窗口高度
-keymap.set("n", "<", "<c-w>-")  -- 减少窗口高度
-keymap.set("n", ",", "<c-w><")  -- 减少窗口宽度
-keymap.set("n", ".", "<c-w>>")  -- 增加窗口宽度
+keymap.set("n", "<c-j>", "<c-w>+")  -- 增加窗口高度
+keymap.set("n", "<c-k>", "<c-w>-")  -- 减少窗口高度
+keymap.set("n", "<c-h>", "<c-w><")  -- 减少窗口宽度
+keymap.set("n", "<c-l>", "<c-w>>")  -- 增加窗口宽度
 
 -- 进入插入模式
 keymap.set("n", "a", "i")
