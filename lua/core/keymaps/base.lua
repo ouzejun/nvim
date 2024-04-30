@@ -31,9 +31,9 @@ keymap.set("n", "W", "e")
 keymap.set("n", "E", "ge")
 
 -- 视觉框移动
-keymap.set("n", "mi", "zt5<Up>5<Down>")
+keymap.set("n", "mk", "zt5<Up>5<Down>")
 keymap.set("n", "mm", "zz")
-keymap.set("n", "mk", "zb5<Down>5<Up>", { noremap = true })
+keymap.set("n", "mj", "zb5<Down>5<Up>", { noremap = true })
 
 -- 窗口制作
 keymap.set("n", "|", ":vsplit<CR>")
