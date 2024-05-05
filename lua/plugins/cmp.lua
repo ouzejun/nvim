@@ -1,5 +1,5 @@
 vim.api.nvim_set_hl(0, "CmpItemMenu",
-  { fg = NONE })
+  { fg = none })
 
 local M = {
 	"hrsh7th/nvim-cmp",

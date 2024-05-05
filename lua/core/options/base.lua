@@ -31,7 +31,7 @@ opt.smartcase = true
 
 -- 设置 signcolumn 始终显示，可以根据需要更改这个设置
 vim.opt.signcolumn = "yes:3"
-vim.api.nvim_set_hl(0, "SignColumn", {bg = NONE})
+vim.api.nvim_set_hl(0, "SignColumn", {bg = none})
 
 
 -- 设置 Neovim 窗口分割线的字符
