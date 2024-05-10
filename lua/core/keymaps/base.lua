@@ -5,7 +5,7 @@ local keymap = vim.keymap
 -- ----------which key --------
 require("which-key").register({
   ["<leader>l"]  = "right pane",
-  ["<leader>w"]  = "left pane",
+  ["<leader>h"]  = "left pane",
   ["<leader>j"]  = "down pane",
   ["<leader>k"]  = "up pane",
 })

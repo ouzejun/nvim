@@ -24,6 +24,7 @@ require('dap.languages.python')
 
 -- core
 -- keymaps
+require('core.keymaps.align')
 require('core.keymaps.base')
 require('core.keymaps.buffer')
 require('core.keymaps.copilot')
