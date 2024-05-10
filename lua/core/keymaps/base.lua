@@ -2,6 +2,14 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+-- ----------which key --------
+require("which-key").register({
+  ["<leader>l"]  = "right pane",
+  ["<leader>w"]  = "left pane",
+  ["<leader>j"]  = "down pane",
+  ["<leader>k"]  = "up pane",
+})
+
 -- ----------插入模式----------
 -- 上下左右移动
 keymap.set("i", "<c-h>", "<Left>")
@@ -13,6 +21,8 @@ keymap.set("i", "<c-j>", "<Down>")
 -- 批量移动
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "w", "")
+keymap.set("v", "e", "")
 
 -- ----------普通模式----------
 -- 上下左右移动

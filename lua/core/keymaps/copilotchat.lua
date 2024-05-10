@@ -1,5 +1,10 @@
 local keymap = vim.keymap
 
+require("which-key").register({
+  ["<leader>i"] = "ai",
+  ["<leader>iq"] = "copilot quick ask"
+})
+
 -- normal
 keymap.set("n", "<leader>ic", "<cmd>CopilotChatToggle<CR>")
 -- keymap.set("n", "<leader>id", "<cmd>CopilotChatDocs<CR>")
