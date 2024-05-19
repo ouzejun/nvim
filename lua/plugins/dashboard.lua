@@ -6,8 +6,6 @@ return {
       theme = 'hyper',
       config = {
         header = {
-          "",
-          "",
           "███╗     ██╗ ███████╗  ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
           "██╔██╗   ██║ ██╔════╝ ██╔═══██╗ ██║   ██║ ██║ ████╗ ████║",
           "██║╚██╗  ██║ █████╗   ██║   ██║ ██║   ██║ ██║ ██╔████╔██║",
@@ -76,10 +74,10 @@ return {
         },
         project = {
           enable = true,
-          limit = 7,
+          limit = 5,
         },
         mru = {
-          limit = 14,
+          limit = 7,
         },
         packages = { enabel = true },
         disable_mode = true,

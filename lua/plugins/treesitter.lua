@@ -8,7 +8,7 @@ return {
       -- ensure_installed = "all",
       highlight = {
         enable = true,
-        disable = { 'latexs' },  -- list of language that will be disabled
+        disable = all,  -- list of language that will be disabled
       },
       indent = { enable = true },
       incremental_selection = {

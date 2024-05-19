@@ -31,21 +31,21 @@ vim.cmd [[
   highlight Keyword gui=italic,bold guifg=#e5c890
   " highlight @variable gui=italic guifg=
 
-  highlight lualine_b_diff_added_normal guibg=#626880 guifg=#629eb3
-  highlight lualine_b_diff_added_insert guibg=#626880 guifg=#629eb3
-  highlight lualine_b_diff_added_visual guibg=#626880 guifg=#629eb3
-  highlight lualine_b_diff_added_replace guibg=#626880 guifg=#629eb3
-  highlight lualine_b_diff_added_command guibg=#626880 guifg=#629eb3
-  highlight lualine_b_diff_added_terminal guibg=#626880 guifg=#629eb3
-  highlight lualine_b_diff_added_inactive guibg=#626880 guifg=#629eb3
+  highlight lualine_b_diff_added_normal guibg=#212430 guifg=#629eb3
+  highlight lualine_b_diff_added_insert guibg=#212430 guifg=#629eb3
+  highlight lualine_b_diff_added_visual guibg=#212430 guifg=#629eb3
+  highlight lualine_b_diff_added_replace guibg=#212430 guifg=#629eb3
+  highlight lualine_b_diff_added_command guibg=#212430 guifg=#629eb3
+  highlight lualine_b_diff_added_terminal guibg=#212430 guifg=#629eb3
+  highlight lualine_b_diff_added_inactive guibg=#212430 guifg=#629eb3
 
-  highlight lualine_b_diff_removed_normal guibg=#626880 guifg=#74b362
-  highlight lualine_b_diff_removed_insert guibg=#626880 guifg=#74b362
-  highlight lualine_b_diff_removed_visual guibg=#626880 guifg=#74b362
-  highlight lualine_b_diff_removed_replace guibg=#626880 guifg=#74b362
-  highlight lualine_b_diff_removed_command guibg=#626880 guifg=#74b362
-  highlight lualine_b_diff_removed_terminal guibg=#626880 guifg=#74b362
-  highlight lualine_b_diff_removed_inactive guibg=#626880 guifg=#74b362
+  highlight lualine_b_diff_removed_normal guibg=#212430 guifg=#74b362
+  highlight lualine_b_diff_removed_insert guibg=#212430 guifg=#74b362
+  highlight lualine_b_diff_removed_visual guibg=#212430 guifg=#74b362
+  highlight lualine_b_diff_removed_replace guibg=#212430 guifg=#74b362
+  highlight lualine_b_diff_removed_command guibg=#212430 guifg=#74b362
+  highlight lualine_b_diff_removed_terminal guibg=#212430 guifg=#74b362
+  highlight lualine_b_diff_removed_inactive guibg=#212430 guifg=#74b362
 
   highlight DiffAdd guibg=none guifg=#9ACD32
   highlight DiffChange guibg=none guifg=#EEB422
