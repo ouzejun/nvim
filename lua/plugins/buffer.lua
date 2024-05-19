@@ -1,8 +1,10 @@
 return {
   'akinsho/bufferline.nvim',
+  version = 'v4.5.0',
   dependencies = 'nvim-tree/nvim-web-devicons',
   config = function()
     require('bufferline').setup {
+
       highlights = {
         tab_separator_selected = {
           underline = true,
