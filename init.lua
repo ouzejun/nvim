@@ -47,6 +47,7 @@ else
   -- options
   require('core.options.base')
   require('core.options.codesnap')
+  require('core.options.fidget')
 
   -- highlights
   require('core.highlights.base')

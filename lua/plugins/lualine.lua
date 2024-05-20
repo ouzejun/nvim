@@ -28,7 +28,7 @@ local colors = {
 
 local mode = {
   function()
-    return ' '
+    return ' '
   end,
   separator = {
     left = '',
@@ -106,7 +106,7 @@ local diff = {
 }
 local info = {
   function()
-    return ' '
+    return ' '
   end,
   color = { bg = colors.green, fg = colors.black },
   separator = {

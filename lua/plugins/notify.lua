@@ -7,10 +7,10 @@ return {
       background_colour = '#1e222a',
       text_colour = '#abb2bf',
       icons = {
-        ERROR = '',
-        WARN = '',
-        INFO = '',
-        DEBUG = '',
+        ERROR = ' ',
+        WARN = ' ',
+        INFO = ' ',
+        DEBUG = ' ',
         TRACE = '✎',
       },
     })

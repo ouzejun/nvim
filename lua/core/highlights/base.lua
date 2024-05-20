@@ -12,7 +12,7 @@ vim.cmd [[
   highlight ColorColumn ctermbg=8
   highlight NonText guifg=#B5BFE2
   highlight LineNr guifg=#A5ADCE
-  highlight Title guifg=#F38BA8
+  highlight Title guifg=#F38BA8 guibg=None
   highlight Type guifg=#A6D189 
   highlight Statement guifg=#E5C890
   highlight Function guifg=#8CAAEE
@@ -27,6 +27,11 @@ vim.cmd [[
   highlight StatusLine guibg=none 
   highlight StatusLineNC guibg=none 
   highlight CursorLine guibg=#626880
+  highlight Question guibg=None ctermbg=None
+  highlight WarningMsg guibg=None ctermbg=None
+  highlight Constant guibg=None ctermbg=None
+  highlight FloatShadow guibg=None
+  highlight FloatShadowThrough guibg=None
 
   highlight Comment gui=italic guifg=#80a0ff
   highlight Keyword gui=italic,bold guifg=#e5c890
