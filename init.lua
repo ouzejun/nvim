@@ -18,6 +18,7 @@ else
   require('lsp.languages.rust')
   require('lsp.languages.snip')
   require('lsp.languages.typst')
+  require('lsp.languages.xml')
 
   -- dap
   require('dap.dapui')
