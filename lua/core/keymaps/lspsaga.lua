@@ -11,5 +11,6 @@ keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>")
 keymap.set("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
 keymap.set("n", "go", "<cmd>Lspsaga outline<CR>")
 keymap.set("n", "gt", "<cmd>Lspsaga term_toggle<CR>")
+keymap.set("n", "gw", "<cmd>Lspsaga show_workspace_diagnostics ++normal <CR>")
 keymap.set("t", "<c-d>", "<cmd>Lspsaga term_toggle<CR>")
 

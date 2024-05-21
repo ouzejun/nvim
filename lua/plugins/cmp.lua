@@ -87,11 +87,11 @@ M.config = function()
     sources = {
       { name = 'nvim_lsp', priority = 7 },
       { name = 'nvim_lua', priority = 2 },
-      { name = 'luasnip', priority = 4 },
-      { name = 'buffer', priority = 4 },
-      { name = 'path', priority = 5 },
+      { name = 'luasnip', priority = 6 },
+      { name = 'buffer', priority = 5 },
+      { name = 'path', priority = 4 },
       -- { name = 'neorg', priority = 6 },
-      { name = 'emoji', priority = 7 },
+      { name = 'emoji', priority = 3 },
     },
     formatting = {
       format = function(entry, vim_item)
@@ -105,6 +105,7 @@ M.config = function()
 					luasnip  = "[LuaSnip]",
 					nvim_lua = "[NvimAPI]",
           path     = "[Path]",
+          emoji    = "[Emoji]",
         })[entry.source.name]
         return vim_item
       end,

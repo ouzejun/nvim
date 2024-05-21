@@ -13,12 +13,14 @@ return {
 
       options = {
         icons = 'both',
-        icon_separator_active = '▎',
-        icon_separator_inactive = '▎',
+        separator_style = {'', ''},
+        -- icon_separator_active = '▎',
+        -- icon_separator_inactive = '▎',
         icon_close_tab_modified = '●',
+        buffer_close_icon = '',
 
         indicator = {
-          icon = '▎', -- this should be omitted if indicator style is not 'icon'
+          style = 'none', -- this should be omitted if indicator style is not 'icon'
         },
 
         offsets = {
@@ -45,6 +47,7 @@ return {
             or (e == "warning" and "  ")
             or (e == "info" and "  ")
             or e == "hint" and "  "
+            s = s .. n .. sym
           end
           return s
         end,

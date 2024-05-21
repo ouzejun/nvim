@@ -11,6 +11,9 @@ return {
         enable = true,
         hide_keyword = true,
       },
+      diagnostic = {
+        show_code_action = true,
+      },
       signature = {
         enable = true,
       },
