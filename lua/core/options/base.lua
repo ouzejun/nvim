@@ -33,6 +33,8 @@ opt.smartcase = true
 vim.opt.signcolumn = "yes:3"
 vim.api.nvim_set_hl(0, "SignColumn", {bg = none})
 
+-- 将下面的命令行隐藏起来
+vim.o.cmdheight = 0
 
 -- 设置 Neovim 窗口分割线的字符
 -- `vert` 选项设置垂直分割线的字符

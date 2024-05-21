@@ -85,7 +85,7 @@ M.config = function()
       end, { 'i', 's' }),
     }),
     sources = {
-      { name = 'nvim_lsp', priority = 3 },
+      { name = 'nvim_lsp', priority = 7 },
       { name = 'nvim_lua', priority = 2 },
       { name = 'luasnip', priority = 4 },
       { name = 'buffer', priority = 4 },

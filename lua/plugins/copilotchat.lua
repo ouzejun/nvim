@@ -7,11 +7,11 @@ return {
       { "nvim-lua/plenary.nvim"}, -- for curl, log wrapper
     },
     opts = {
-      debug = true, -- Enable debugging
+      debug = false, -- Enable debugging
       window = {
         layout = "float",
         width = 0.90,
-        height = 0.85,
+        height = 0.80,
       },
     },
   },
