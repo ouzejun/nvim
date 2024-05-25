@@ -52,12 +52,13 @@ else
 
   -- highlights
   require('core.highlights.base')
-  require('core.highlights.buffer')
   require('core.highlights.dashboard')
   require('core.highlights.flod')
   require('core.highlights.ibl')
   require('core.highlights.lspsaga')
   require('core.highlights.neotree')
+  require('core.highlights.dapui')
+  require('core.highlights.buffer')
 
   -- neovide
   require('core.neovide')

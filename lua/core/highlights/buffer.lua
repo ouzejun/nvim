@@ -15,4 +15,58 @@ vim.cmd [[
   highlight BufferLineWarningDiagnosticSelected guifg=#9e753a guibg=none gui=bold
   highlight BufferLineInfoSelected              guifg=#add8e6 guibg=none gui=bold
   highlight BufferLineInfoDiagnosticSelected    guifg=#81a2ac guibg=none gui=bold
+
+  highlight BufferLineTruncMarker               guibg=none
+  highlight BufferLineError                     guibg=none
+  highlight BufferLineErrorDiagnostic           guibg=none
+  highlight BufferLineSeparatorSelected         guibg=none
+  highlight BufferLineDuplicateSelected         guibg=none
+  highlight BufferLineModifiedSelected          guibg=none
+  highlight BufferLineModifiedVisible           guibg=none
+  highlight BufferLineModified                  guibg=none
+  highlight BufferLineSeparator                 guibg=none
+  highlight BufferLineGroupSeparator            guibg=none
+  highlight BufferLineTruncMarker guibg=none
+  highlight BufferLinePick  guibg=none
+  highlight BufferLineErrorDiagnosticVisible guibg=none
+  highlight BufferLineTabClose guibg=none
+  highlight BufferLineCloseButton guibg=none
+  highlight BufferLineIndicatorVisible guibg=none
+  highlight BufferLineModified guibg=none
+  highlight BufferLineError guibg=none
+  highlight BufferLineBuffer guibg=none
+  highlight BufferLineHint guibg=none
+  highlight BufferLineErrorVisible guibg=none
+  highlight BufferLineFill guibg=none
+  highlight BufferLineWarning guibg=none
+  highlight BufferLineOffsetSeparator guibg=none
+  highlight BufferLineTab guibg=none
+  highlight BufferLineIndicatorSelected guibg=none
+  highlight BufferLineTabSeparator guibg=none
+  highlight BufferLineSeparatorVisible guibg=none
+  highlight BufferLineSeparatorSelected guibg=none
+  highlight BufferLineDuplicate guibg=none
+  highlight BufferLineDuplicateVisible guibg=none
+  highlight BufferLineNumbers guibg=none
+  highlight BufferLineTabSeparatorSelected guibg=none
+  highlight BufferLineWarningDiagnosticVisible   guibg=none
+  highlight BufferLineWarningDiagnostic   guibg=none 
+  highlight BufferLineWarningVisible   guibg=none
+  highlight BufferLineInfoDiagnosticVisible   guibg=none
+  highlight BufferLineInfoDiagnostic   guibg=none 
+  highlight BufferLineInfoVisible   guibg=none
+  highlight BufferLineHintDiagnosticVisible   guibg=none
+  highlight BufferLineHintDiagnostic   guibg=none 
+  highlight BufferLineHintVisible   guibg=none
+  highlight BufferLineDiagnosticSelected  guibg=none
+  highlight BufferLineDiagnosticVisible   guibg=none
+  highlight BufferLineNumbersVisible   guibg=none
+  highlight BufferLineCloseButtonSelected   guibg=none
+  highlight BufferLineCloseButtonVisible   guibg=none
+  highlight BufferLineDiagnostic   guibg=none
+  highlight BufferLineInfo   guibg=none 
+  highlight BufferLineTabSelected   guibg=none
+
+  highlight BufferLineDevIconLuaInactive guibg=none guifg=#51a0cf
+  highlight BufferLineDevIconLuaSelected guibg=none guifg=#51a0cf
 ]]

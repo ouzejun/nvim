@@ -1,6 +1,8 @@
 vim.cmd [[
+  highlight WinBar guibg=none
+  highlight WinBarNC guibg=none
   highlight Normal guibg=none
-  highlight NormalFoalt guibg=none
+  highlight NormalFloat guibg=none
   highlight VertSplit guifg=#56617d guibg=none
   highlight IildMenu guibg=#E5C890 guifg=#494D64 gui=bold
   highlight MatchParen guibg=#E78284 guifg=#D4D4D4

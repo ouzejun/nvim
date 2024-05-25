@@ -6,4 +6,6 @@ vim.cmd [[
   highlight NeoTreeTabInactive guibg=none
   highlight NeoTreeTabSeparatorInactive guibg=none
   highlight NeoTreeFileStatsHeader guibg=none
+  highlight NeoTreeFloatTitle guibg=none
+  highlight NeoTreeTitleBar guibg=#B5BFE2 guifg=#000000
 ]]
