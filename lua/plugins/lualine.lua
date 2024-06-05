@@ -54,7 +54,6 @@ local branch = {
   color = {
     bg = colors.red,
     fg = colors.black,
-    gui = 'bold'
   },
   separator = {
     left = '',
@@ -108,11 +107,16 @@ local info = {
   function()
     return ' '
   end,
-  color = { bg = colors.green, fg = colors.black },
+  color = {
+    bg = colors.green,
+    fg = colors.black,
+    gui = 'bold'
+  },
   separator = {
     left  = '',
-    right = ''
+    right = '',
   },
+  padding = { left = 1, right = 1 },
 }
 local diagnostics = {
   'diagnostics',
@@ -124,10 +128,6 @@ local diagnostics = {
     warn  = { fg = 'DiagnosticWarn',   bg = none },
     info  = { fg = 'DiaganosticInfo',  bg = none },
     hint  = { fg = 'DiaganosticHint',  bg = none },
-  },
-  separator = {
-    left = '',
-    right = ''
   },
   update_in_insert = true,
   colored = true,
@@ -276,13 +276,29 @@ return {
           lualine_b = {
             filename,
             branch,
+            { function()
+                return " "
+            end,
+              padding = { left = 0, right = 0 },
+            },  -- 添加这个空函数作为占位符
             GitRootToParentDirectory,
-            diff
+            { function()
+                return " "
+            end,
+              padding = { left = 0, right = 0 },
+            },
+            diff,
           },
-          lualine_c = { info, diagnostics},
+          lualine_c = { info, diagnostics },
           lualine_x = { fileformat},
           lualine_y = { filesize, filetype },
-          lualine_z = { location }
+          lualine_z = {
+            { function()
+                return " "
+            end,
+              padding = { left = 0, right = 0 },
+            },
+            location }
         },
         inactive_sections = {
           lualine_a = {},

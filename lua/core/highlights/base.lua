@@ -1,14 +1,21 @@
 vim.cmd [[
+  highlight Special guibg=none guifg=#C372C2
+  highlight Constant guibg=none guifg=#89B4FA
+  highlight @string.special.url guibg=none guifg=#366B71 gui=underline,italic
+  highlight Macro guibg=none guifg=#BC5FD3
+  highlight NvimLightCyan guifg=#81C8BE
+  highlight @variable guibg=none guifg=#3097C6
+  highlight Character guibg=none guifg=#CC8BCF
   highlight WinBar guibg=none
   highlight WinBarNC guibg=none
-  highlight Normal guibg=none
-  highlight NormalFloat guibg=none
+  highlight Normal guibg=none guifg=#B5BFE2
+  highlight NormalFloat guibg=none guifg=#B5BFE2
   highlight VertSplit guifg=#56617d guibg=none
   highlight IildMenu guibg=#E5C890 guifg=#494D64 gui=bold
   highlight MatchParen guibg=#E78284 guifg=#D4D4D4
   highlight NvimParenthesis guifg=#D4D4D4
   highlight Search guifg=#45475A guibg=#B5BFE2
-  highlight Pmenu guibg=None
+  highlight Pmenu guibg=None guibg=none
   highlight SpecialKey ctermbg=None ctermfg=None guifg=#458587
   highlight ErrorMsg guifg=#51576D guibg=#f78b8b
   highlight ColorColumn ctermbg=8
@@ -37,7 +44,6 @@ vim.cmd [[
 
   highlight Comment gui=italic guifg=#80a0ff
   highlight Keyword gui=italic,bold guifg=#e5c890
-  " highlight @variable gui=italic guifg=
 
   highlight lualine_b_diff_added_normal guibg=#212430 guifg=#629eb3
   highlight lualine_b_diff_added_insert guibg=#212430 guifg=#629eb3

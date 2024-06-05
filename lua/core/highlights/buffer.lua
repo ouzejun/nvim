@@ -69,4 +69,14 @@ vim.cmd [[
 
   highlight BufferLineDevIconLuaInactive guibg=none guifg=#51a0cf
   highlight BufferLineDevIconLuaSelected guibg=none guifg=#51a0cf
+  highlight BufferLineDevIconLua guibg=none guifg=#51a0cf
+  highlight BufferLineDevIconJavaInactive guibg=none guifg=#cc3e44
+  highlight BufferLineDevIconJavaSelected guibg=none guifg=#cc3e44
+  highlight BufferLineDevIconJava guibg=none guifg=#cc3e44
+  highlight BufferLineDevIconMavenInactive guibg=none guifg=#7a0d21
+  highlight BufferLineDevIconMavenSelected guibg=none guifg=#7a0d21
+  highlight BufferLineDevIconMaven guibg=none guifg=#7a0d21
+  highlight BufferLineDevIconDefaultInactive guibg=none guifg=#6d8086
+  highlight BufferLineDevIconDefaultSelected guibg=none guifg=#6d8086
+  highlight BufferLineDevIconDefault guibg=none guifg=#6d8086
 ]]
