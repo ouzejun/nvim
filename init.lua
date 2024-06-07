@@ -19,6 +19,7 @@ else
   require('lsp.languages.snip')
   require('lsp.languages.typst')
   require('lsp.languages.xml')
+  require('lsp.languages.sql')
 
   -- dap
   require('dap.dapui')
@@ -59,6 +60,7 @@ else
   require('core.highlights.neotree')
   require('core.highlights.dapui')
   require('core.highlights.buffer')
+  require('core.highlights.float-command-line')
 
   -- neovide
   require('core.neovide')

@@ -67,3 +67,7 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "javascript",
   command = [[setlocal shiftwidth=2 tabstop=2 expandtab]]
 })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "xml",
+  command = [[setlocal shiftwidth=2 tabstop=2 expandtab]]
+})

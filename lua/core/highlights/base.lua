@@ -1,7 +1,12 @@
 vim.cmd [[
   highlight Special guibg=none guifg=#C372C2
+  highlight Added guibg=none guifg=#86B300
+  highlight Changed guibg=none guifg=#F5B378
+  highlight Removed guibg=none guifg=#FF6767
+  highlight @lsp.type.class guibg=none guifg=#D5A425
   highlight Constant guibg=none guifg=#89B4FA
   highlight @string.special.url guibg=none guifg=#366B71 gui=underline,italic
+  highlight Structure guibg=none guifg=#E67E80
   highlight Macro guibg=none guifg=#BC5FD3
   highlight NvimLightCyan guifg=#81C8BE
   highlight @variable guibg=none guifg=#3097C6
@@ -12,7 +17,8 @@ vim.cmd [[
   highlight NormalFloat guibg=none guifg=#B5BFE2
   highlight VertSplit guifg=#56617d guibg=none
   highlight IildMenu guibg=#E5C890 guifg=#494D64 gui=bold
-  highlight MatchParen guibg=#E78284 guifg=#D4D4D4
+  highlight MatchParen guibg=none guifg=#EFB5F7 gui=underline,italic
+  highlight NvimParenthesis guifg=#EFB5F7
   highlight NvimParenthesis guifg=#D4D4D4
   highlight Search guifg=#45475A guibg=#B5BFE2
   highlight Pmenu guibg=None guibg=none
@@ -22,7 +28,7 @@ vim.cmd [[
   highlight NonText guifg=#B5BFE2
   highlight LineNr guifg=#A5ADCE
   highlight Title guifg=#F38BA8 guibg=None
-  highlight Type guifg=#A6D189 
+  highlight Type guifg=#83C092
   highlight Statement guifg=#E5C890
   highlight Function guifg=#8CAAEE
   highlight Identifier guifg=#81C8BE

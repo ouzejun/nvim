@@ -58,10 +58,9 @@ M.config = function()
 			documentation = cmp.config.window.bordered(),
 		},
 		mapping = cmp.mapping.preset.insert({
-		  ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-			["<C-f>"] = cmp.mapping.scroll_docs(4),
-			["<C-w>"] = cmp.mapping.select_prev_item(),
-			["<C-s>"] = cmp.mapping.select_next_item(),
+		  ["<C-w>"] = cmp.mapping.scroll_docs(-4),
+			["<C-s>"] = cmp.mapping.scroll_docs(4),
+      ["<C-e>"] = cmp.mapping.close(),
 			["<C-P>"] = cmp.mapping.complete(),
 			["<C-p>"] = cmp.mapping.abort(),
 			["<CR>"] = cmp.mapping.confirm({ select = false }),
@@ -92,34 +91,41 @@ M.config = function()
       { name = 'path', priority = 4 },
       -- { name = 'neorg', priority = 6 },
       { name = 'emoji', priority = 3 },
+      { name = 'cmdline', priority = 1}
     },
     formatting = {
       format = function(entry, vim_item)
-				-- Kind icons
-				vim_item.kind = string.format("%s %s",
-				  kind_icons[vim_item.kind], vim_item.kind)
-				-- Source
-				vim_item.menu = ({
-					buffer   = "[Buffer]",
-					nvim_lsp = "[LSP]",
-					luasnip  = "[LuaSnip]",
-					nvim_lua = "[NvimAPI]",
+        -- Kind icons
+        vim_item.kind = string.format("%s %s",
+          kind_icons[vim_item.kind], vim_item.kind)
+        -- Source
+        vim_item.menu = ({
+          buffer   = "[Buffer]",
+          nvim_lsp = "[LSP]",
+          luasnip  = "[LuaSnip]",
+          nvim_lua = "[NvimAPI]",
           path     = "[Path]",
           emoji    = "[Emoji]",
+          cmdline  = "[cmd]",
         })[entry.source.name]
         return vim_item
       end,
     },
-  })
+})
 
   cmp.setup.cmdline(":", {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
+      { name = "cmdline" },
       { name = "path" },
-    }, {
-        { name = "cmdline" },
-      }
-    ),
+    }),
+  })
+
+  cmp.setup.filetype('cmdpalette', {
+    sources = cmp.config.sources({
+      { name = "cmdline" },
+      { name = "path" },
+    }),
   })
 end
 

@@ -67,6 +67,9 @@ vim.cmd [[
   highlight BufferLineInfo   guibg=none 
   highlight BufferLineTabSelected   guibg=none
 
+  highlight BufferLineDevIconXmlSelected guibg=none guifg=#e37933
+  highlight BufferLineDevIconXmlInactive guibg=none guifg=#e37933
+  highlight BufferLineDevIconXml guibg=none guifg=#e37933
   highlight BufferLineDevIconLuaInactive guibg=none guifg=#51a0cf
   highlight BufferLineDevIconLuaSelected guibg=none guifg=#51a0cf
   highlight BufferLineDevIconLua guibg=none guifg=#51a0cf
