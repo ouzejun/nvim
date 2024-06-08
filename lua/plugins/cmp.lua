@@ -91,7 +91,7 @@ M.config = function()
       { name = 'path', priority = 4 },
       -- { name = 'neorg', priority = 6 },
       { name = 'emoji', priority = 3 },
-      { name = 'cmdline', priority = 1}
+      -- { name = 'cmdline', priority = 1}
     },
     formatting = {
       format = function(entry, vim_item)
