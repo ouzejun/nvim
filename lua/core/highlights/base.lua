@@ -1,8 +1,8 @@
 vim.cmd [[
   highlight Special guibg=none guifg=#C372C2
-  highlight Added guibg=none guifg=#86B300
-  highlight Changed guibg=none guifg=#F5B378
-  highlight Removed guibg=none guifg=#FF6767
+  highlight Added guibg=none guifg=#91c779
+  highlight Changed guibg=none guifg=#f2a830
+  highlight Removed guibg=none guifg=#f23f54
   highlight @lsp.type.class guibg=none guifg=#D5A425
   highlight Constant guibg=none guifg=#89B4FA
   highlight @string.special.url guibg=none guifg=#366B71 gui=underline,italic
@@ -70,7 +70,4 @@ vim.cmd [[
   highlight DiffAdd guibg=none guifg=#9ACD32
   highlight DiffChange guibg=none guifg=#EEB422
   highlight DiffDelete guibg=none guifg=#EE6363
-  highlight GitSignsStagedAdd guibg=#9ACD32 guifg=#B5BFE2
-  highlight GitSignsStagedChange guibg=none guifg=#629eb3
-  highlight GitSignsStagedDelete guibg=none guifg=#629eb3
 ]]

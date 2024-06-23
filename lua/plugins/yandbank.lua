@@ -6,5 +6,6 @@ return {
       },
     })
   end,
+  lazy = true,
 }
 

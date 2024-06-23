@@ -1,13 +1,13 @@
 vim.g.mapleader = " "
-
 local keymap = vim.keymap
 
 -- ----------which key --------
 require("which-key").register({
-  ["<leader>l"]  = "right pane",
-  ["<leader>h"]  = "left pane",
-  ["<leader>j"]  = "down pane",
-  ["<leader>k"]  = "up pane",
+  ["<leader>l"]  = "右侧的面板",
+  ["<leader>h"]  = "左侧的面板",
+  ["<leader>j"]  = "下面的面板",
+  ["<leader>k"]  = "上面的面板",
+  ["<leader>nh"] = "取消高亮",
 })
 
 -- ----------插入模式----------

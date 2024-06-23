@@ -5,10 +5,9 @@ return {
     local configs = require("nvim-treesitter.configs")
 
     configs.setup({
-      -- ensure_installed = "all",
+      ensure_installed = "all",
       highlight = {
         enable = true,
-        disable = all,  -- list of language that will be disabled
       },
       indent = { enable = true },
       incremental_selection = {

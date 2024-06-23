@@ -2,21 +2,26 @@ return {
   "lewis6991/gitsigns.nvim",
   config = function ()
     require("gitsigns").setup({
-      signs = {
-        add          = { hl = "GitSignsAdd",    text = " ",  numhl = "GitSignsAddNr" },
-        change       = { hl = "GitSignsChange", text = " ",  numhl = "GitSignsChangeNr" },
-        delete       = { hl = "GitSignsDelete", text = " ",  numhl = "GitSignsDeleteNr" },
-        topdelete    = { hl = "GitSignsDelete", text = " ",  numhl = "GitSignsDeleteNr" },
-        changedelete = { hl = "GitSignsChange", text = " ",  numhl = "GitSignsChangeNr" },
-      },
+      -- signs = {
+      --   add          = { text = " " },
+      --   change       = { text = " " },
+      --   delete       = { text = " " },
+      --   topdelete    = { text = " " },
+      --   changedelete = { text = " " },
+      --   untracked    = { text = " " },
+      -- },
+
+      signs_staged_enable = false,
 
       signcolumn = true,
-      numhl      = false,
+      numhl      = true,
       linehl     = false,
       word_diff  = false,
+
       watch_gitdir = {
-        follow_files = true
+        follow_files = false
       },
+
       auto_attach = true,
       attach_to_untracked = false,
       current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
@@ -30,4 +35,3 @@ return {
     })
   end
 }
-

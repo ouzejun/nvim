@@ -1,16 +1,21 @@
 local keymap = vim.keymap
 
-keymap.set("n", "ga", "<cmd>Lspsaga code_action<CR>")
-keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
-keymap.set("n", "gD", "<cmd>Lspsaga goto_definition<CR>")
-keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>")
-keymap.set("n", "gh", "<cmd>Lspsaga hover_doc<CR>")
-keymap.set("n", "gH", "<cmd>Lspsaga hover_doc ++keep<CR>")
-keymap.set("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>")
-keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>")
-keymap.set("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
-keymap.set("n", "go", "<cmd>Lspsaga outline<CR>")
-keymap.set("n", "gt", "<cmd>Lspsaga term_toggle<CR>")
-keymap.set("n", "gw", "<cmd>Lspsaga show_workspace_diagnostics ++normal <CR>")
-keymap.set("t", "<c-d>", "<cmd>Lspsaga term_toggle<CR>")
+require("which-key").register({
+  g = {
+    name = "lsp saga",
+    a = { "<cmd>Lspsaga code_action<CR>", "Code Action" },
+    d = { "<cmd>Lspsaga peek_definition<CR>", "Peek Definition" },
+    D = { "<cmd>Lspsaga goto_definition<CR>", "Goto Definition" },
+    r = { "<cmd>Lspsaga rename<CR>", "Rename" },
+    h = { "<cmd>Lspsaga hover_doc<CR>", "Hover Doc" },
+    H = { "<cmd>Lspsaga hover_doc ++keep<CR>", "Hover Doc Keep" },
+    j = { "<cmd>Lspsaga diagnostic_jump_next<CR>", "Diagnostic Jump Next" },
+    f = { "<cmd>Lspsaga finder<CR>", "Finder" },
+    k = { "<cmd>Lspsaga diagnostic_jump_prev<CR>", "Diagnostic Jump Prev" },
+    o = { "<cmd>Lspsaga outline<CR>", "Outline" },
+    t = { "<cmd>Lspsaga term_toggle<CR>", "Term Toggle" },
+    w = { "<cmd>Lspsaga show_workspace_diagnostics ++normal <CR>", "Show Workspace Diagnostics" },
+  }
+})
 
+keymap.set("t", "<c-d>", "<cmd>Lspsaga term_toggle<CR>")

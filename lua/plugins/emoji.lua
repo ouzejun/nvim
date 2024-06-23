@@ -14,5 +14,5 @@ return {
     -- optional if your plugin installation directory
     -- is not vim.fn.stdpath("data") .. "/lazy/
   },
-  lazy = false,
+  lazy = true,
 }
