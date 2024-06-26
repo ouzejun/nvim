@@ -82,7 +82,10 @@ vim.cmd [[
   highlight BufferLineDevIconDefaultInactive guibg=none guifg=#6d8086
   highlight BufferLineDevIconDefaultSelected guibg=none guifg=#6d8086
   highlight BufferLineDevIconDefault guibg=none guifg=#6d8086
-  highlight BufferLineDevIconLogInactive guifg=none guibg=#121418
-  highlight BufferLineDevIconLogSelected guifg=none guibg=#121418
-  highlight BufferLineDevIconLog guifg=none guibg=#121418
+  highlight BufferLineDevIconLogInactive guibg=none guifg=#121418
+  highlight BufferLineDevIconLogSelected guibg=none guifg=#121418
+  highlight BufferLineDevIconLog guibg=none guifg=#121418
+  highlight BufferLineDevIconTomlInactive guibg=none guifg=#9c4221
+  highlight BufferLineDevIconTomlSelected guibg=none guifg=#9c4221
+  highlight BufferLineDevIconToml guibg=none guifg=#9c4221
 ]]
