@@ -67,25 +67,44 @@ vim.cmd [[
   highlight BufferLineInfo   guibg=none 
   highlight BufferLineTabSelected   guibg=none
 
+  " Xml
   highlight BufferLineDevIconXmlSelected guibg=none guifg=#e37933
   highlight BufferLineDevIconXmlInactive guibg=none guifg=#e37933
+  highlight BufferLineDevIconXmlSelected guibg=none guifg=#e37933
   highlight BufferLineDevIconXml guibg=none guifg=#e37933
+  " lua
   highlight BufferLineDevIconLuaInactive guibg=none guifg=#51a0cf
   highlight BufferLineDevIconLuaSelected guibg=none guifg=#51a0cf
+  highlight BufferLineDevIconLuaSelected guibg=none guifg=#51a0cf
   highlight BufferLineDevIconLua guibg=none guifg=#51a0cf
+  " java
+  highlight BufferLineDevIconJava guibg=none guifg=#cc3e44
   highlight BufferLineDevIconJavaInactive guibg=none guifg=#cc3e44
   highlight BufferLineDevIconJavaSelected guibg=none guifg=#cc3e44
   highlight BufferLineDevIconJava guibg=none guifg=#cc3e44
+  " maven
   highlight BufferLineDevIconMavenInactive guibg=none guifg=#7a0d21
   highlight BufferLineDevIconMavenSelected guibg=none guifg=#7a0d21
+  highlight BufferLineDevIconMavenSeInactive guibg=none guifg=#7a0d21
   highlight BufferLineDevIconMaven guibg=none guifg=#7a0d21
+  " Default
   highlight BufferLineDevIconDefaultInactive guibg=none guifg=#6d8086
   highlight BufferLineDevIconDefaultSelected guibg=none guifg=#6d8086
+  highlight BufferLineDevIconDefaultSeInactive guibg=none guifg=#6d8086
   highlight BufferLineDevIconDefault guibg=none guifg=#6d8086
+  " Log
   highlight BufferLineDevIconLogInactive guibg=none guifg=#121418
   highlight BufferLineDevIconLogSelected guibg=none guifg=#121418
+  highlight BufferLineDevIconLogSeInactive guibg=none guifg=#121418
   highlight BufferLineDevIconLog guibg=none guifg=#121418
+  " toml
   highlight BufferLineDevIconTomlInactive guibg=none guifg=#9c4221
   highlight BufferLineDevIconTomlSelected guibg=none guifg=#9c4221
+  highlight BufferLineDevIconTomlSeInactive guibg=none guifg=#9c4221
   highlight BufferLineDevIconToml guibg=none guifg=#9c4221
+  " python
+  highlight BufferLineDevIconPyInactive guibg=none guifg=#ffbc03
+  highlight BufferLineDevIconPySelected guibg=none guifg=#ffbc03
+  highlight BufferLineDevIconPySeInactive guibg=none guifg=#ffbc03
+  highlight BufferLineDevIconPy guibg=none guifg=#ffbc03
 ]]
