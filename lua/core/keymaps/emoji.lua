@@ -1,4 +1,6 @@
-local keymap = vim.keymap
-
-keymap.set("n", "<leader>fe", "<cmd>Telescope emoji<CR>",
-  { noremap = true, silent = true })
+require("which-key").register{
+  ["<leader>f"] = {
+    name = "Telescope查找",
+    e = { "<cmd>Telescope emoji<CR>", "寻找Emoji" },
+  },
+}

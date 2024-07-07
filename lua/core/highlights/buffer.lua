@@ -107,4 +107,9 @@ vim.cmd [[
   highlight BufferLineDevIconPySelected guibg=none guifg=#ffbc03
   highlight BufferLineDevIconPySeInactive guibg=none guifg=#ffbc03
   highlight BufferLineDevIconPy guibg=none guifg=#ffbc03
+  " Pub
+  highlight BufferLineDevIconPubInactive guibg=none guifg=#ffbc03
+  highlight BufferLineDevIconPubSelected guibg=none guifg=#ffbc03
+  highlight BufferLineDevIconPubSeInactive guibg=none guifg=#ffbc03
+  highlight BufferLineDevIconPub guibg=none guifg=#ffbc03
 ]]

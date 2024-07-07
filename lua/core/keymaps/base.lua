@@ -2,75 +2,70 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- ----------which key --------
-require("which-key").register({
-  ["<leader>l"]  = "右侧的面板",
-  ["<leader>h"]  = "左侧的面板",
-  ["<leader>j"]  = "下面的面板",
-  ["<leader>k"]  = "上面的面板",
-  ["<leader>nh"] = "取消高亮",
-})
-
--- ----------插入模式----------
--- 上下左右移动
-keymap.set("i", "<c-h>", "<Left>")
-keymap.set("i", "<c-l>", "<Right>")
-keymap.set("i", "<c-k>", "<Up>")
-keymap.set("i", "<c-j>", "<Down>")
-
--- ----------视觉模式----------
--- 批量移动
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-keymap.set("v", "w", "")
-keymap.set("v", "e", "")
-
 -- ----------普通模式----------
--- 上下左右移动
-keymap.set("n", "k", "<Up>")
-keymap.set("n", "j", "<Down>")
-keymap.set("n", "h", "<Left>")
-keymap.set("n", "l", "<Right>")
-keymap.set("n", "<s-k>", "5<Up>")
-keymap.set("n", "<s-j>", "5<Down>")
-keymap.set("n", "<s-h>", "5<Left>")
-keymap.set("n", "<s-l>", "5<Right>")
-
--- 单词移动
-keymap.set("n", "w", "b")
-keymap.set("n", "W", "e")
-keymap.set("n", "E", "ge")
-
--- 视觉框移动
-keymap.set("n", "mk", "zt5<Up>5<Down>")
-keymap.set("n", "mm", "zz")
-keymap.set("n", "mj", "zb5<Down>5<Up>", { noremap = true })
-
--- 窗口制作
-keymap.set("n", "|", ":vsplit<CR>")
-keymap.set("n", "-", "<cmd>split<CR>")
-
--- 窗口移动
-keymap.set("n", "<leader>l", "<c-w>l")
-keymap.set("n", "<leader>k", "<c-w>k")
-keymap.set("n", "<leader>h", "<c-w>h")
-keymap.set("n", "<leader>j", "<c-w>j")
-
--- 窗口大小
-keymap.set("n", "<c-j>", "<c-w>+")  -- 增加窗口高度
-keymap.set("n", "<c-k>", "<c-w>-")  -- 减少窗口高度
-keymap.set("n", "<c-h>", "<c-w><")  -- 减少窗口宽度
-keymap.set("n", "<c-l>", "<c-w>>")  -- 增加窗口宽度
-
--- 进入插入模式
-keymap.set("n", "a", "i")
-keymap.set("n", "<s-a>", "a")
-
--- u键管理
-keymap.set("n", "<c-u>", "<c-r>")
-keymap.set("n", "<s-u>", "<c-r>")
-
--- 取消高亮
-keymap.set("n", "<leader>nh", ":nohl<CR>")
+require("which-key").register{
+  -- 上下左右移动
+  ["<s-k>"] = { "5<Up>", "5行上移" },
+  ["<s-j>"] = { "5<Down>", "5行下移" },
+  ["<s-h>"] = { "5<Left>", "5列左移" },
+  ["<s-l>"] = { "5<Right>", "5列右移" },
+  -- 单词移动
+  ["w"] = { "b", "前一个单词开头" },
+  ["W"] = { "W", "前一个单词结尾", },
+  ["e"] = { "e", "后一个单词结尾" },
+  ["E"] = { "ge", "后一个单词开头" },
+  -- 视觉框移动
+  m = {
+    name = "视觉框",
+    k = { "zt5<Up>5<Down>", "居上" },
+    j = { "zb5<Down>5<Up>", "居下" },
+    m = { "zz", "居中" },
+  },
+  -- 窗口制作
+  ["|"] = { ":vsplit<CR>", "垂直分割" },
+  ["-"] = { "<cmd>split<CR>", "水平分割" },
+  -- 窗口移动
+  ["<leader>"] = {
+    name = "leader键",
+    h = { "<c-w>h", "窗口左移" },
+    j = { "<c-w>j", "窗口下移" },
+    k = { "<c-w>k", "窗口上移" },
+    l = { "<c-w>l", "窗口右移" },
+    -- 取消高亮
+    nh = { "<cmd>noh<CR>", "取消高亮" },
+  },
+  -- 窗口大小
+  ["<c-h>"] = { "<c-w><", "减少窗口宽度" },
+  ["<c-l>"] = { "<c-w>>", "增加窗口宽度" },
+  ["<c-k>"] = { "<c-w>+", "增加窗口高度" },
+  ["<c-j>"] = { "<c-w>-", "减少窗口高度" },
+  -- 进入插入模式
+  ["A"] = { "a", "向后插入" },
+  ["a"] = { "i", "向前插入" },
+  -- u键管理
+  u = { "u", "重做" },
+  ["<s-u>"] = { "<c-r>", "撤销重做" },
+  ["<c-u>"] = { "<c-r>", "撤销重做" },
+}
+-- ----------视觉模式----------
+require("which-key").register{
+  -- 快捷移动
+  ["<s-k>"] = { mode = "v", ":m '>+1<CR>gv=gv", "整体上移" },
+  ["<s-j>"] = { mode = "v", ":m '<-2<CR>gv=gv", "整体下移" },
+  -- 单词移动
+  ["w"] = { mode = "v", "b", "前一个单词开头" },
+  ["W"] = { mode = "v", "W", "前一个单词结尾", },
+  ["e"] = { mode = "v", "e", "后一个单词结尾" },
+  ["E"] = { mode = "v", "ge", "后一个单词开头" },
+}
+-- ----------插入模式----------
+require("which-key").register{
+  -- 上下左右移动
+  ["<c-h>"] = { mode = "i", "<Left>", "左移" },
+  ["<c-l>"] = { mode = "i", "<Right>", "右移" },
+  ["<c-k>"] = { mode = "i", "<Up>", "上移" },
+  ["<c-j>"] = { mode = "i", "<Down>", "下移" },
+}
 
 -- 删除一些不必要容易引起麻烦的键
 keymap.set("n", "s", "<Nop>")

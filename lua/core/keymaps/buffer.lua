@@ -1,8 +1,12 @@
 local keymap = vim.keymap
-
-vim.keymap.set("n", "tl", ":BufferLineCycleNext<CR>")
-vim.keymap.set("n", "th", ":BufferLineCyclePrev<CR>")
-vim.keymap.set("n", "tp", ":BufferLinePick<CR>")
-vim.keymap.set("n", "tx", ":BufferLinePickClose<CR>")
-vim.keymap.set("n", "t<s-h>", ":BufferLineMoveNext<CR>")
-vim.keymap.set("n", "t<s-j>", ":BufferLineMovePrev<CR>")
+require("which-key").register{
+  t = {
+    name = "Buffer",
+    l = { "<cmd>BufferLineCycleNext<CR>", "下一个缓冲区" },
+    h = { "<cmd>BufferLineCyclePrev<CR>", "上一个缓冲区" },
+    p = { "<cmd>BufferLinePick<CR>", "选择缓冲区" },
+    x = { "<cmd>BufferLinePickClose<CR>", "关闭缓冲区" },
+    ["<s-h>"] = { "<cmd>BufferLineMoveNext<CR>", "移动缓冲区" },
+    ["<s-j>"] = { "<cmd>BufferLineMovePrev<CR>", "移动缓冲区" },
+  }
+}

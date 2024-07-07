@@ -3,7 +3,7 @@ local keymap = vim.keymap
 require("which-key").register({
   g = {
     name = "lsp saga",
-    a = { "<cmd>Lspsaga code_action<CR>", "Code Action" },
+    a = { "<cmd>Lspsaga code_action<CR>", "Code Action", mode = "n"},
     d = { "<cmd>Lspsaga peek_definition<CR>", "Peek Definition" },
     D = { "<cmd>Lspsaga goto_definition<CR>", "Goto Definition" },
     r = { "<cmd>Lspsaga rename<CR>", "Rename" },

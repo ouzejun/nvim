@@ -1,4 +1,15 @@
 local keymap = vim.keymap
-
-keymap.set("n", "<leader>a", ":EasyAlign<CR>")
-keymap.set("v", "<leader>a", ":EasyAlign<CR>")
+require("which-key").register{
+  ["<leader>a"] = {
+    name = "对齐",
+    mode = "n",
+    ["<leader>a"] = { "<cmd>EasyAlign<CR>", "对齐" },
+  },
+}
+require("which-key").register{
+  ["<leader>a"] = {
+    name = "对齐",
+    mode = "v",
+    ["<leader>a"] = { "<cmd>EasyAlign<CR>", "对齐" },
+  },
+}
