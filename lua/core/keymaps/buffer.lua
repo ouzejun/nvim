@@ -7,6 +7,6 @@ require("which-key").register{
     p = { "<cmd>BufferLinePick<CR>", "选择缓冲区" },
     x = { "<cmd>BufferLinePickClose<CR>", "关闭缓冲区" },
     ["<s-h>"] = { "<cmd>BufferLineMoveNext<CR>", "移动缓冲区" },
-    ["<s-j>"] = { "<cmd>BufferLineMovePrev<CR>", "移动缓冲区" },
+    ["<s-l>"] = { "<cmd>BufferLineMovePrev<CR>", "移动缓冲区" },
   }
 }
