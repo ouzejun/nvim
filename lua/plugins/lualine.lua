@@ -3,24 +3,16 @@
 -- +-------------------------------------------------+
 local colors = {
   white     = '#B5BFE2',
-
   light_red = '#f38ba8',
   red       = '#E78284',
-
   orange    = '#fc9003',
-
   yellow    = '#E5C890',
-
   green     = '#A9D3AB',
-
   blue      = '#8CAAEE',
-
   pink      = '#F5BDE6',
-
   darkgray  = '#626880',
   gray      = '#A5ADCE',
   lightgray = '#b4befe',
-
   black     = '#51576D',
   black_bg  = '#212430'
 }
@@ -30,9 +22,14 @@ local mode = {
   function()
     return ' '
   end,
+  color = {
+    bg = colors.blue,
+    fg = colors.black,
+    gui = 'bold'
+  },
   separator = {
     left = '',
-    right = ''
+    right = '',
   },
 }
 local filename = {

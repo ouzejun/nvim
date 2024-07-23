@@ -1,32 +1,56 @@
-require("which-key").register{
-  ["<leader>i"] = {
-    name = "AI",
-    mode = "n",
-    c = { "<cmd>CopilotChatToggle<CR>", "交互界面" },
-    q = { function()
+local wk = require("which-key")
+wk.add{
+  { "<leader>i", group = "ai copilot", },
+  {
+    "<leader>ic",
+    "<cmd>CopilotChatToggle<CR>",
+    mode = "n", desc = "interaction chat",
+    icon = {
+      icon = " ",
+      color = "blue",
+    }
+  },
+  {
+    "<leader>iq",
+    function()
       local input = vim.fn.input("Quick Chat: ")
       if input ~= "" then
         require("CopilotChat").ask(input,
           { selection = require("CopilotChat.select").buffer }
         )
       end
-    end, "本文问答" },
-    d = { "<cmd>CopilotChatDocs<CR>", "文档" },
-    o = { "<cmd>CopilotChatOptimize<CR>", "优化" },
-    f = { "<cmd>CopilotChatFix<CR>", "修复" },
+    end,
+    mode = { "n", "v" }, desc = "quick chat",
+    icon = {
+      icon = " ",
+      color = "blue",
+    }
   },
-}
-require("which-key").register{
-  ["<leader>i"] = {
-    name = "AI",
-    mode = "v",
-    q = { function()
-      local input = vim.fn.input("Quick Chat: ")
-      if input ~= "" then
-        require("CopilotChat").ask(input, { selection = require("CopilotChat.select").visual })
-      end
-    end, "所选问答" },
-    d = { "<cmd>CopilotChatDocs<CR>", "所选文档" },
-    f = { "<cmd>CopilotChatFix<CR>", "所选修复" },
+  {
+    "<leader>id",
+    "<cmd>CopilotChatDocs<CR>",
+    mode = { "n", "v" }, desc = "create document",
+    icon = {
+      icon = " ",
+      color = "blue",
+    }
+  },
+  {
+    "<leader>if",
+    "<cmd>CopilotChatFix<CR>",
+    mode = { "n", "v" }, desc = "fix code",
+    icon = {
+      icon = " ",
+      color = "blue",
+    }
+  },
+  {
+    "<leader>io",
+    "<cmd>CopilotChatOptimize<CR>",
+    mode = { "n", "v" }, desc = "optimize",
+    icon = {
+      icon = " ",
+      color = "blue",
+    }
   },
 }

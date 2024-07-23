@@ -1,21 +1,117 @@
 local keymap = vim.keymap
+local wk = require("which-key")
 
-require("which-key").register({
-  g = {
-    name = "lsp saga",
-    a = { "<cmd>Lspsaga code_action<CR>", "Code Action", mode = "n"},
-    d = { "<cmd>Lspsaga peek_definition<CR>", "Peek Definition" },
-    D = { "<cmd>Lspsaga goto_definition<CR>", "Goto Definition" },
-    r = { "<cmd>Lspsaga rename<CR>", "Rename" },
-    h = { "<cmd>Lspsaga hover_doc<CR>", "Hover Doc" },
-    H = { "<cmd>Lspsaga hover_doc ++keep<CR>", "Hover Doc Keep" },
-    j = { "<cmd>Lspsaga diagnostic_jump_next<CR>", "Diagnostic Jump Next" },
-    f = { "<cmd>Lspsaga finder<CR>", "Finder" },
-    k = { "<cmd>Lspsaga diagnostic_jump_prev<CR>", "Diagnostic Jump Prev" },
-    o = { "<cmd>Lspsaga outline<CR>", "Outline" },
-    t = { "<cmd>Lspsaga term_toggle<CR>", "Term Toggle" },
-    w = { "<cmd>Lspsaga show_workspace_diagnostics ++normal <CR>", "Show Workspace Diagnostics" },
-  }
+wk.add({
+  { "g", group = "lsp saga"},
+
+  {
+    "ga",
+    "<cmd>Lspsaga code_action<CR>",
+    mode = "n", desc = "code action",
+    icon = {
+      icon = " ",
+      color = "blue",
+    }
+  },
+  {
+    "gd",
+    "<cmd>Lspsaga preview_definition<CR>",
+    mode = "n", desc = "preview definition",
+    icon = {
+      icon = " ",
+      color = "red",
+    }
+  },
+  {
+    "gD",
+    "<cmd>Lspsaga goto_definition<CR>",
+    mode = "n", desc = "goto definition",
+    icon = {
+      icon = " ",
+      color = "red",
+    }
+  },
+  {
+    "gr",
+    "<cmd>Lspsaga rename<CR>",
+    mode = "n", desc = " multi rename",
+    icon = {
+      icon = " ",
+      color = "orange",
+    }
+  },
+  {
+    "gh",
+    "<cmd>Lspsaga hover_doc<CR>",
+    mode = "n", desc = "float doc",
+    icon = {
+      icon = " ",
+      color = "green",
+    }
+  },
+  {
+    "gH",
+    "<cmd>Lspsaga signature_help<CR>",
+    mode = "n", desc = "right doc",
+    icon = {
+      icon = " ",
+      color = "green",
+    }
+  },
+  {
+    "gj",
+    "<cmd>Lspsaga diagnostic_jump_next<CR>",
+    mode = "n", desc = "diagnostic jump next",
+    icon = {
+      icon = "󱞤 ",
+      color = "red",
+    }
+  },
+  {
+    "gf",
+    "<cmd>Lspsaga finder<CR>",
+    mode = "n", desc = "finder",
+    icon = {
+      icon = "󰈞 ",
+      color = "azure",
+    }
+  },
+  {
+    "gk",
+    "<cmd>Lspsaga diagnostic_jump_prev<CR>",
+    mode = "n", desc = "diagnostic jump prev",
+    icon = {
+      icon = "󱞢 ",
+      color = "red",
+    }
+  },
+  {
+    "go",
+    "<cmd>Lspsaga outline<CR>",
+    mode = "n", desc = "outline",
+    icon = {
+      icon = " ",
+      color = "purple",
+    }
+  },
+  {
+    "gt",
+    "<cmd>Lspsaga term_toggle<CR>",
+    mode = "n", desc = "terminal",
+    icon = {
+      icon = " ",
+      color = "grey",
+    }
+  },
+  {
+    "gw",
+    "<cmd>Lspsaga show_workspace_diagnostics ++normal <CR>",
+    mode = "n", desc = "workspace diagnostics",
+    icon = {
+      icon = " ",
+      color = "red",
+    }
+  },
 })
 
 keymap.set("t", "<c-d>", "<cmd>Lspsaga term_toggle<CR>")

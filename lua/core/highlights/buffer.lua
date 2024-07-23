@@ -116,5 +116,9 @@ vim.cmd [[
   highlight BufferLineDevIconBashrcInactive guibg=none guifg=#89e051
   highlight BufferLineDevIconBashrcSelected guibg=none guifg=#89e051
   highlight BufferLineDevIconBashrcSeInactive guibg=none guifg=#89e051
-
+  " bash
+  highlight BufferLineDevIconShInactive guibg=none guifg=#4d5a5e
+  highlight BufferLineDevIconShSelected guibg=none guifg=#4d5a5e
+  highlight BufferLineDevIconShSeInactive guibg=none guifg=#4d5a5e
+  highlight BufferLineDevIconSh guibg=none guifg=#4d5a5e
 ]]

@@ -1,15 +1,25 @@
 local keymap = vim.keymap
-require("which-key").register{
-  ["<leader>a"] = {
-    name = "对齐",
-    mode = "n",
-    ["<leader>a"] = { "<cmd>EasyAlign<CR>", "对齐" },
+local wk = require("which-key")
+wk.add({
+  { "<leader>", group = " 󱁐" },
+
+  {
+    "<leader>a",
+    "<cmd>EasyAlign<CR>",
+    mode = "n", desc = "align",
+    icon = {
+      icon = " ",
+      color = "green",
+    }
   },
-}
-require("which-key").register{
-  ["<leader>a"] = {
-    name = "对齐",
-    mode = "v",
-    ["<leader>a"] = { "<cmd>EasyAlign<CR>", "对齐" },
+  {
+    "<leader>a",
+    "<cmd>EasyAlign<CR>",
+    mode = "x",
+    desc = "align",
+    icon = {
+      icon = " ",
+      color = "green",
+    }
   },
-}
+})

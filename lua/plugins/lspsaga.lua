@@ -18,7 +18,7 @@ return {
         enable = true,
       },
       outline = {
-        win_width = 50,
+        win_width = 30,
       },
       implement = {
         enable = true,
@@ -34,7 +34,7 @@ return {
         }
       },
       float_terminal = {
-        win_width = 50,
+        win_width = 70,
       },
     })
   end,

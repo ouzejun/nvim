@@ -42,6 +42,7 @@ require('core.keymaps.telescope')
 require('core.keymaps.todo')
 require('core.keymaps.yankbank')
 require('core.keymaps.gitsigns')
+require('core.keymaps.lazydocker')
 
 -- options
 require('core.options.base')

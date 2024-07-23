@@ -1,12 +1,68 @@
-require("which-key").register{
-  G = {
-    name = "Git Signs",
-    s = { "<cmd>lua require('gitsigns').stage_hunk()<CR>", "暂存" },
-    u = { "<cmd>lua require('gitsigns').undo_stage_hunk()<CR>", "撤销暂存" },
-    d = { "<cmd>lua require('gitsigns').reset_hunk()<CR>", "撤销修改" },
-    D = { "<cmd>lua require('gitsigns').reset_buffer()<CR>", "撤销所有修改" },
-    p = { "<cmd>lua require('gitsigns').preview_hunk()<CR>", "查看修改" },
-    l = { "<cmd>lua require('gitsigns').blame_line(true)<CR>", "查看修改者信息" },
-    n = { "<cmd>lua require('gitsigns').next_hunk()<CR>", "下一处修改" },
-  }
+local wk = require("which-key")
+wk.add{
+  { "G", group = "gitsign" },
+
+  {
+    "Gs",
+    "<cmd>lua require('gitsigns').stage_hunk()<CR>",
+    mode = "n", desc = "hunk change",
+    icon = {
+      icon = " ",
+      color = "red",
+    }
+  },
+  {
+    "Gu",
+    "<cmd>lua require('gitsigns').undo_stage_hunk()<CR>",
+    mode = "n", desc = "undo stage hunk",
+    icon = {
+      icon = " ",
+      color = "blue",
+    }
+  },
+  {
+    "Gd",
+    "<cmd>lua require('gitsigns').reset_hunk()<CR>",
+    mode = "n", desc = "discard hunk",
+    icon = {
+      icon = " ",
+      color = "orange"
+    }
+  },
+  {
+    "GD",
+    "<cmd>lua require('gitsigns').reset_buffer()<CR>",
+    mode = "n", desc = "discard hunk",
+    icon = {
+      icon = " ",
+      color = "orange"
+    }
+  },
+  {
+    "Gp",
+    "<cmd>lua require('gitsigns').preview_hunk()<CR>",
+    mode = "n", desc = "preview hunk",
+    icon = {
+      icon = "󰷊 ",
+      color = "orange"
+    }
+  },
+  {
+    "Gl",
+    "<cmd>lua require('gitsigns').blame_line(true)<CR>",
+    mode = "n", desc = "blame line",
+    icon = {
+      icon = "󱂷 ",
+      color = "orange"
+    }
+  },
+  {
+    "Gn",
+    "<cmd>lua require('gitsigns').next_hunk()<CR>",
+    mode = "n", desc = "next hunk",
+    icon = {
+      icon = "󰮰 ",
+      color = "orange"
+    }
+  },
 }
