@@ -121,4 +121,14 @@ vim.cmd [[
   highlight BufferLineDevIconShSelected guibg=none guifg=#4d5a5e
   highlight BufferLineDevIconShSeInactive guibg=none guifg=#4d5a5e
   highlight BufferLineDevIconSh guibg=none guifg=#4d5a5e
+  " git ignore
+  highlight BufferLineDevIconGitIgnoreInactive guibg=none guifg=#f54d27
+  highlight BufferLineDevIconGitIgnoreSelected guibg=none guifg=#f54d27
+  highlight BufferLineDevIconGitIgnoreSeInactive guibg=none guifg=#f54d27
+  highlight BufferLineDevIconGitIgnore guibg=none guifg=#f54d27
+  " txt
+  highlight BufferLineDevIconTxt guibg=none guifg=#89e051
+  highlight BufferLineDevIconTxtInactive guibg=none guifg=#89e051
+  highlight BufferLineDevIconTxtSelected guibg=none guifg=#89e051
+  highlight BufferLineDevIconTxtSeInactive guibg=none guifg=#89e051
 ]]
