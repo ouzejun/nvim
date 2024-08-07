@@ -166,7 +166,7 @@ wk.add{
   },
   -- 取消高亮
   {
-    "<leader>ng",
+    "<leader>nh",
     "<cmd>noh<CR>",
     desc = "cancel highlight",
     icon = {
