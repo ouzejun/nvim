@@ -1,3 +1,8 @@
+-- 禁用左侧图标
+vim.diagnostic.config({
+  signs = false,
+})
+
 return {
   "nvimdev/lspsaga.nvim",
   config = function()
@@ -13,6 +18,7 @@ return {
       },
       diagnostic = {
         show_code_action = true,
+        diagnostic_only_current = false,
       },
       signature = {
         enable = true,

@@ -88,7 +88,7 @@ M.config = function()
       { name = 'nvim_lua', priority = 2 },
       { name = 'luasnip', priority = 6 },
       { name = 'buffer', priority = 5 },
-      { name = 'path', priority = 4 },
+      { name = 'path', priority = 4},
       -- { name = 'neorg', priority = 6 },
       { name = 'emoji', priority = 3 },
       -- { name = 'cmdline', priority = 1}

@@ -1,13 +1,15 @@
 ---@diagnostic disable: undefined-global
 local opt = vim.opt
-vim.opt.termguicolors = true
+opt.termguicolors = true
 
 -- 语法高亮
 syntax = "on"
 
 -- 行号
-opt.relativenumber = true
+opt.numberwidth = 1
+opt.relativenumber = false
 opt.number = true
+opt.cursorline = true
 
 -- 防止包裹
 opt.wrap = true
@@ -30,7 +32,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- 设置 signcolumn 始终显示，可以根据需要更改这个设置
-vim.opt.signcolumn = "yes:3"
+opt.signcolumn = "yes:1"
 vim.api.nvim_set_hl(0, "SignColumn", {bg = none})
 
 -- 将下面的命令行隐藏起来
@@ -41,6 +43,9 @@ vim.o.cmdheight = 0
 -- `hor` 选项设置水平分割线的字符
 -- `eob` 表示余下的没有代码部分的符号
 vim.o.fillchars = "vert:│,horiz:─,eob: "
+
+-- 禁用 foldcolumn
+vim.opt.foldcolumn = '0'
 
 -- 设置默认 tab 为两个空格
 vim.o.tabstop = 4

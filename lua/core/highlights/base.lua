@@ -1,4 +1,5 @@
 vim.cmd [[
+  highlight CursorLineNr guifg=#FFD700 guibg=none gui=italic
   highlight Special guibg=none guifg=#C372C2
   highlight Added guibg=none guifg=#91c779
   highlight Changed guibg=none guifg=#f2a830

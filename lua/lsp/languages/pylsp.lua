@@ -1,17 +1,15 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("lspconfig").pylsp.setup {
-  capabilities = capabilities,
-}
-require'lspconfig'.pyright.setup{
-  capabilities = capabilities,
+  -- capabilities = capabilities,
   settings = {
-    python = {
-      analysis = {
-        diagnosticMode = "workspace",
-        typeCheckingMode = "off",
-        diagnosticSeverityOverrides = {
-          ["reportAttributeAccessIssue"] = "none"
-        }
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          maxLineLength = 200,
+        },
+        flake8 = {
+          maxLineLength = 200,
+        },
       }
     }
   }

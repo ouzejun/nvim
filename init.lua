@@ -28,6 +28,7 @@ require('dap.languages.python')
 -- keymaps
 require('core.keymaps.align')
 require('core.keymaps.base')
+require('core.keymaps.gitsign')
 require('core.keymaps.buffer')
 require('core.keymaps.copilot')
 require('core.keymaps.copilotchat')
@@ -39,7 +40,6 @@ require('core.keymaps.lspsaga')
 require('core.keymaps.neotree')
 require('core.keymaps.telescope')
 require('core.keymaps.todo')
-require('core.keymaps.gitsigns')
 require('core.keymaps.lazydocker')
 
 -- options
